@@ -1,0 +1,18 @@
+<nav role="navigation">
+  <div class="logo">
+    <h4><a href="#">marcenico</a></h4>
+  </div>
+
+  <ul class="nav-links" [ngClass]="{ 'nav-active': showMenu }">
+    <li [ngClass]="{ 'animate-link-1': showMenu }"><a href="">Home</a></li>
+    <li [ngClass]="{ 'animate-link-2': showMenu }"><a href="">Portfolio</a></li>
+    <li [ngClass]="{ 'animate-link-3': showMenu }"><a href="">Blog</a></li>
+    <li [ngClass]="{ 'animate-link-4': showMenu }"><a href="">Contact</a></li>
+  </ul>
+
+  <div class="burger" (click)="openBurgerMenu()">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </div>
+</nav>
