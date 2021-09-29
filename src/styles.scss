@@ -11,8 +11,8 @@ html,
 body {
   overflow-x: hidden;
   height: 100%;
-  font-family: 'Cascadia Code', serif;
-  background: linear-gradient(135deg, $primary, $primary-light);
+  font-family: 'Source Code Pro', monospace, serif;
+  background: linear-gradient(135deg, $error, $primary);
 }
 
 .container {
