@@ -5,7 +5,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  margin: 0 15px;
+  margin: 0 20px;
+}
+
+.logo {
+  z-index: 1;
 }
 
 .logo a {
@@ -23,29 +27,21 @@ nav {
     height: 3px;
     margin: 5px;
     background-color: $white;
-  }
-  input {
-    padding: 3px;
-    display: flex;
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
+    transition: all 0.3s ease;
   }
 }
 
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 35%;
+  width: 40%;
   height: auto;
   li {
     list-style: none;
     transition: transform 0.3s ease-in;
     a {
-      padding: 10px;
+      display: flex;
+      padding: 15px;
       color: $white;
       text-decoration: none;
       font-weight: bold;
@@ -69,7 +65,7 @@ nav {
     z-index: 1;
   }
   .nav-links {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,9 +74,9 @@ nav {
     right: 0px;
     width: 100%;
     height: 100vh;
-    background-color: #24242470;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
+    background-color: $primary;
+    clip-path: circle(0px at 100% 0%);
+    transition: clip-path 0.8s ease-out;
     li {
       margin: 60px 0px;
       opacity: 0;
@@ -88,30 +84,37 @@ nav {
   }
 }
 
+.burger-active {
+  :nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  :nth-child(2) {
+    opacity: 0;
+  }
+  :nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
 .nav-active {
-  will-change: transform;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+  clip-path: circle(1500px at 90% -10%);
 }
 
 /*#region NavLinks Animation*/
 @for $i from 1 through 4 {
   .animate-link-#{$i} {
-    animation: navLinkFade 0.3s ease forwards ($i/7 + 0.3s);
+    animation: navLinkFadeIn 0.3s ease forwards ($i/7 + 0.3s);
   }
 }
 
-@keyframes navLinkFade {
+@keyframes navLinkFadeIn {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(60px);
   }
   to {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateZ(0);
   }
 }
 /*#endregion NavLinks Animation*/

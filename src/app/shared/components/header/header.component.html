@@ -10,9 +10,9 @@
     <li [ngClass]="{ 'animate-link-4': showMenu }"><a href="">Contact</a></li>
   </ul>
 
-  <div class="burger" (click)="openBurgerMenu()">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
+  <div class="burger" [ngClass]="{ 'burger-active': showMenu }" (click)="openBurgerMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
   </div>
 </nav>
