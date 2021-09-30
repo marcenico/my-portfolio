@@ -7,12 +7,21 @@
   font-size: 16px;
 }
 
+html {
+  position: fixed;
+}
+
 html,
 body {
-  overflow-x: hidden;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
   font-family: 'Source Code Pro', monospace, serif;
-  background: linear-gradient(135deg, $error, $primary);
+  background: linear-gradient($error, $primary);
+}
+
+body {
+  position: relative;
 }
 
 .container {

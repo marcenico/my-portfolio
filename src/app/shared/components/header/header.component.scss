@@ -16,27 +16,6 @@ nav {
   font-size: 20px;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 35%;
-  height: auto;
-  li {
-    list-style: none;
-    transition: transform 0.3s ease-in;
-    a {
-      padding: 5px;
-      color: $white;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-}
-
 .burger {
   display: none;
   div {
@@ -54,6 +33,27 @@ nav {
     cursor: pointer;
     opacity: 0;
     z-index: 2;
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+  height: auto;
+  li {
+    list-style: none;
+    transition: transform 0.3s ease-in;
+    a {
+      padding: 10px;
+      color: $white;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -87,9 +87,16 @@ nav {
 }
 
 .nav-active {
+  will-change: transform;
   transform: translateX(0%);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
+/*#region NavLinks Animation*/
 @for $i from 1 through 4 {
   .animate-link-#{$i} {
     animation: navLinkFade 0.3s ease forwards ($i/7 + 0.3s);
@@ -106,3 +113,4 @@ nav {
     transform: translateX(0px);
   }
 }
+/*#endregion NavLinks Animation*/
