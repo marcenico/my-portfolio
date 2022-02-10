@@ -4,10 +4,10 @@
   </div>
 
   <ul class="nav-links" [ngClass]="{ 'nav-active': showMenu }">
-    <li [ngClass]="{ 'animate-link-1': showMenu }"><a href="">Home</a></li>
-    <li [ngClass]="{ 'animate-link-2': showMenu }"><a href="">Portfolio</a></li>
-    <li [ngClass]="{ 'animate-link-3': showMenu }"><a href="">Blog</a></li>
-    <li [ngClass]="{ 'animate-link-4': showMenu }"><a href="">Contact</a></li>
+    <li [ngClass]="{ 'animate-link-1': showMenu }"><a routerLink="home">Home</a></li>
+    <li [ngClass]="{ 'animate-link-2': showMenu }"><a routerLink="portfolio">Portfolio</a></li>
+    <!-- <li [ngClass]="{ 'animate-link-3': showMenu }"><a href="">Blog</a></li> -->
+    <!-- <li [ngClass]="{ 'animate-link-4': showMenu }"><a href="">Contact</a></li> -->
   </ul>
 
   <div class="burger" [ngClass]="{ 'burger-active': showMenu }" (click)="openBurgerMenu()">
