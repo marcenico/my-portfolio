@@ -44,11 +44,11 @@ img {
 
 /*#region Reusables classes */
 .bg-gradient {
-  background: -webkit-linear-gradient(135deg, var(--second-color), var(--first-color));
-  background: -moz-linear-gradient(135deg, var(--second-color), var(--first-color));
-  background: -ms-linear-gradient(135deg, var(--second-color), var(--first-color));
-  background: -o-linear-gradient(135deg, var(--second-color), var(--first-color));
-  background: linear-gradient(135deg, var(--second-color), var(--first-color));
+  background: -webkit-linear-gradient(135deg, var(--first-color), hsl(255, 75%, 40%));
+  background: -moz-linear-gradient(135deg, var(--first-color), hsl(255, 75%, 40%));
+  background: -ms-linear-gradient(135deg, var(--first-color), hsl(255, 75%, 40%));
+  background: -o-linear-gradient(135deg, var(--first-color), hsl(255, 75%, 40%));
+  background: linear-gradient(135deg, var(--first-color), hsl(255, 75%, 40%));
 }
 
 .w-100 {
