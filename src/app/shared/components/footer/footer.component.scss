@@ -1,13 +1,5 @@
-@import 'styles-theme.scss';
-
 :host {
   display: block;
-  background: -webkit-linear-gradient(135deg, $error, $primary);
-  background: -moz-linear-gradient(135deg, $error, $primary);
-  background: -ms-linear-gradient(135deg, $error, $primary);
-  background: -o-linear-gradient(135deg, $error, $primary);
-  background: linear-gradient(135deg, $error, $primary);
-  color: $white;
   padding: 30px;
 }
 
@@ -24,7 +16,7 @@ ul {
       display: flex;
       padding: 10px;
       text-decoration: none;
-      border: solid 2px $white;
+      border: solid 2px #ffffff;
       border-radius: 50%;
     }
     &:hover {
@@ -44,6 +36,6 @@ ul {
   color: #ebebebc4;
   span {
     text-shadow: 1px 2px 2px black;
-    color: $primary-light;
+    color: #ffffff;
   }
 }

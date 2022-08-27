@@ -1,137 +1,75 @@
-@import 'styles-theme.scss';
-
 :host {
-  display: block;
-  background: -webkit-linear-gradient(135deg, $error, $primary);
-  background: -moz-linear-gradient(135deg, $error, $primary);
-  background: -ms-linear-gradient(135deg, $error, $primary);
-  background: -o-linear-gradient(135deg, $error, $primary);
-  background: linear-gradient(135deg, $error, $primary);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
-  padding: 0 24px;
+  height: var(--header-height);
+  padding: 0 1.5rem;
 }
 
-.logo a {
-  color: $white;
-  font-weight: bold;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-size: 20px;
+.nav__main-title {
+  color: var(--text-color-light);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
 }
 
-.burger {
-  display: none;
-  div {
-    width: 26px;
-    height: 3px;
-    margin: 5px;
-    background-color: $white;
-    transition: all 0.6s ease;
-  }
-  :nth-child(2) {
-    width: 16px;
-    margin-right: auto;
-  }
+.nav__menu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: var(--z-fixed);
+  width: 100%;
+  padding: 2.5rem 0.5rem;
+  border-radius: 0.75rem 0.75rem 0 0;
+  box-shadow: -1px -1px 5px -1px #000000bf;
+  -webkit-box-shadow: -1px -1px 5px -1px #000000bf;
+  -moz-box-shadow: -1px -1px 5px -1px #000000bf;
 }
 
-.burger-active {
-  :nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  :nth-child(2) {
-    transform: translateX(20px);
-    opacity: 0;
-  }
-  :nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
+.nav__menu--close {
+  transition: transform 600ms ease;
+  transform: translateY(110%);
 }
 
-.nav-links {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-  height: auto;
-  li {
-    list-style: none;
-    transition: transform 0.3s ease-in;
-    a {
-      display: flex;
-      font-size: 16px;
-      padding: 15px;
-      color: $white;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+.nav__menu--open {
+  transition: transform 600ms ease;
+  transform: translateY(0);
 }
 
-@media (max-width: 1024px) {
-  .nav-links {
-    width: 55%;
-  }
-}
-
-@media (max-width: 768px) {
-  .burger {
-    display: block;
-    z-index: 1;
-  }
-
-  .nav-links {
-    position: fixed;
+.nav__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 2.5rem;
+  .nav__item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    top: 0px;
-    right: 0px;
-    width: 60%;
-    height: 100vh;
-    background: -webkit-linear-gradient(135deg, $error, $primary);
-    background: -moz-linear-gradient(135deg, $error, $primary);
-    background: -ms-linear-gradient(135deg, $error, $primary);
-    background: -o-linear-gradient(135deg, $error, $primary);
-    background: linear-gradient(135deg, $error, $primary);
-    transform: translateX(100%);
-    transition: transform 0.6s ease-out;
-    li {
-      margin: 50px 0px;
-      opacity: 0;
+    .nav__link {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      color: var(--text-color-light);
+      font-size: var(--smaller-font-size);
+      font-weight: var(--font-semi-bold);
     }
   }
-
-  .nav-active {
-    box-shadow: 0px 0px 1px 0px black;
-    transform: translateZ(0);
-  }
 }
 
-/*#region NavLinks Animation*/
-@for $i from 1 through 4 {
-  .animate-link-#{$i} {
-    animation: navLinkFadeIn 0.3s ease forwards ($i/7 + 0.3s);
-  }
+.nav__icon {
+  color: var(--text-color-light);
+  font-size: var(--h2-font-size);
 }
 
-@keyframes navLinkFadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateZ(0);
-  }
+.nav__close-btn {
+  color: var(--text-color-light);
+  font-size: var(--h2-font-size);
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
 }
-/*#endregion NavLinks Animation*/

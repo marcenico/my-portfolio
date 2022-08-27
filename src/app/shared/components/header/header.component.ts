@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  openBurgerMenu() {
+  toggleMenu() {
     this.showMenu = !this.showMenu;
   }
 }

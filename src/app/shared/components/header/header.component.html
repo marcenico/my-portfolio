@@ -1,22 +1,31 @@
-<nav role="navigation">
-  <div class="logo">
-    <h4><a href="#">marcenico</a></h4>
+<nav class="nav bg-gradient" role="navigation">
+  <!-- Main title/Logo -->
+  <a href="#" class="nav__main-title">marcenico</a>
+  <!-- Links -->
+  <div class="nav__menu bg-gradient" [ngClass]="showMenu ? 'nav__menu--open' : 'nav__menu--close'">
+    <ul class="nav__list">
+      <li class="nav__item elem-hover">
+        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-estate nav__icon"></i>Home</a>
+      </li>
+      <li class="nav__item elem-hover">
+        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-user-circle nav__icon"></i>About</a>
+      </li>
+      <li class="nav__item elem-hover">
+        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-file-alt nav__icon"></i>Portfolio</a>
+      </li>
+      <li class="nav__item elem-hover">
+        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-bolt nav__icon"></i>Skills </a>
+      </li>
+      <li class="nav__item elem-hover">
+        <a href="#" class="nav__link" (click)="toggleMenu()"
+          ><i class="uil uil-comment-alt-medical nav__icon"></i>Contact me
+        </a>
+      </li>
+    </ul>
+    <i class="uil uil-times nav__close-btn elem-hover" (click)="toggleMenu()"></i>
   </div>
 
-  <ul class="nav-links" [ngClass]="{ 'nav-active': showMenu }">
-    <li [ngClass]="{ 'animate-link-1': showMenu }">
-      <a routerLink="" (click)="openBurgerMenu()">Home</a>
-    </li>
-    <li [ngClass]="{ 'animate-link-2': showMenu }">
-      <a routerLink="portfolio" (click)="openBurgerMenu()">Portfolio</a>
-    </li>
-    <!-- <li [ngClass]="{ 'animate-link-3': showMenu }"><a href="">Blog</a></li> -->
-    <!-- <li [ngClass]="{ 'animate-link-4': showMenu }"><a href="">Contact</a></li> -->
-  </ul>
-
-  <div class="burger" [ngClass]="{ 'burger-active': showMenu }" (click)="openBurgerMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+  <div class="btn-open-menu elem-hover" (click)="toggleMenu()">
+    <i class="uil uil-apps nav__icon"></i>
   </div>
 </nav>

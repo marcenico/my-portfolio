@@ -1,34 +1,64 @@
-@import 'styles-theme.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
 
+/*#region Base */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
 
 html {
-  position: fixed;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  font-family: 'Source Code Pro', monospace, serif;
-  background-color: $white;
-  font-size: 1em;
-  font-weight: 300;
-  line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 body {
-  position: relative;
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
-.container {
-  width: 100%;
-  padding: 0;
-  margin: 0;
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*#endregion Base */
+
+/*#region Reusables classes */
+.bg-gradient {
+  background: -webkit-linear-gradient(135deg, var(--second-color), var(--first-color));
+  background: -moz-linear-gradient(135deg, var(--second-color), var(--first-color));
+  background: -ms-linear-gradient(135deg, var(--second-color), var(--first-color));
+  background: -o-linear-gradient(135deg, var(--second-color), var(--first-color));
+  background: linear-gradient(135deg, var(--second-color), var(--first-color));
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.elem-hover {
+  transition: 200ms ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+/*#endregion Reusables classes */
