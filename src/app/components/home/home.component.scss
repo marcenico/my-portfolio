@@ -16,20 +16,6 @@
   }
 }
 
-.home__info {
-  .home__title {
-    color: var(--title-color);
-    font-size: var(--big-font-size);
-    margin-bottom: var(--mb-0-25);
-  }
-
-  .home__subtitle {
-    color: var(--text-color);
-    font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-0-75);
-  }
-}
-
 .home__contact-data {
   .home__contact-item {
     margin: 1rem 0;
@@ -42,5 +28,25 @@
         color: var(--first-color);
       }
     }
+  }
+}
+
+.home__info {
+  .home__title {
+    color: var(--title-color);
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-0-25);
+  }
+
+  .home__subtitle {
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+  }
+
+  .home__paragraph {
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-0-75);
   }
 }
