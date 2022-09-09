@@ -1,41 +1,12 @@
 :host {
-  display: block;
-  padding: 30px;
-}
-
-ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  height: auto;
-  li {
-    list-style: none;
-    transition: transform 0.3s ease-in;
-    margin: 0px 15px 15px 15px;
-    a {
-      display: flex;
-      padding: 10px;
-      text-decoration: none;
-      border: solid 2px #ffffff;
-      border-radius: 50%;
-    }
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-}
-
-.logo-social {
-  width: 18px;
-  height: 18px;
+  margin-top: 1rem;
 }
 
 .copyright {
-  text-align: center;
-  font-size: 14px;
-  color: #ebebebc4;
-  span {
-    text-shadow: 1px 2px 2px black;
-    color: #ffffff;
+  .copyright__heart {
+    text-shadow: 1px 2px 2px #aaaaaa;
+    color: var(--first-color);
   }
 }
