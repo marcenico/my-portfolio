@@ -53,6 +53,29 @@ p {
   margin: auto;
 }
 
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  font-weight: var(--font-medium);
+  box-shadow: 1px 1px 3px 1px #00000066;
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+  .button__icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: 200ms ease-in;
+  }
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
 .bg-gradient {
   background: var(--first-color);
 }

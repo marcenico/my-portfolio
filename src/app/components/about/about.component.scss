@@ -20,6 +20,7 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-around;
+  margin-bottom: var(--mb-1);
   div {
     display: flex;
     flex-direction: column;
@@ -33,6 +34,11 @@
   .about__info-paragraph {
     text-align: center;
     color: var(--text-color);
-    font-size: var(--normal-font-size);
+    font-size: var(--smaller-font-size);
   }
+}
+
+.about__button {
+  display: flex;
+  justify-content: center;
 }
