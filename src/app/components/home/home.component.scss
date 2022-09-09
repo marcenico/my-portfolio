@@ -1,6 +1,6 @@
 .home__image-contact-data {
   display: grid;
-  grid-template-columns: 1.7fr 0.3fr;
+  grid-template-columns: 1fr auto;
   justify-items: center;
   align-items: center;
   margin-bottom: var(--mb-2);
@@ -31,17 +31,16 @@
 }
 
 .home__contact-data {
-}
-
-.home__contact-item {
-  margin: 1rem;
-  .home__contact-link {
-    color: var(--text-color);
-    font-size: var(--h1-font-size);
-    font-weight: var(--font-semi-bold);
-    transition: color 200ms ease-in;
-    &:hover {
-      color: var(--first-color);
+  .home__contact-item {
+    margin: 1rem 0;
+    .home__contact-link {
+      color: var(--text-color);
+      font-size: var(--h1-font-size);
+      font-weight: var(--font-semi-bold);
+      transition: color 200ms ease-in;
+      &:hover {
+        color: var(--first-color);
+      }
     }
   }
 }
