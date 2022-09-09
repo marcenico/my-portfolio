@@ -5,19 +5,27 @@
   <div class="nav__menu bg-gradient" [ngClass]="showMenu ? 'nav__menu--open' : 'nav__menu--close'">
     <ul class="nav__list">
       <li class="nav__item elem-hover">
-        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-estate nav__icon"></i>Home</a>
+        <a href="#" class="nav__link" (click)="goTo('home'); toggleMenu()"
+          ><i class="uil uil-estate nav__icon"></i>Home</a
+        >
       </li>
       <li class="nav__item elem-hover">
-        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-user-circle nav__icon"></i>About</a>
+        <a href="#" class="nav__link" (click)="goTo('about'); toggleMenu()"
+          ><i class="uil uil-user-circle nav__icon"></i>About</a
+        >
       </li>
       <li class="nav__item elem-hover">
-        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-file-alt nav__icon"></i>Portfolio</a>
+        <a href="#" class="nav__link" (click)="goTo('portfolio'); toggleMenu()"
+          ><i class="uil uil-file-alt nav__icon"></i>Portfolio</a
+        >
       </li>
       <li class="nav__item elem-hover">
-        <a href="#" class="nav__link" (click)="toggleMenu()"><i class="uil uil-bolt nav__icon"></i>Skills </a>
+        <a href="#" class="nav__link" (click)="goTo('skills'); toggleMenu()"
+          ><i class="uil uil-bolt nav__icon"></i>Skills
+        </a>
       </li>
       <li class="nav__item elem-hover">
-        <a href="#" class="nav__link" (click)="toggleMenu()"
+        <a href="#" class="nav__link" (click)="goTo('contactme'); toggleMenu()"
           ><i class="uil uil-comment-alt-notes nav__icon"></i>Contact me
         </a>
       </li>

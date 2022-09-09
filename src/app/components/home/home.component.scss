@@ -1,5 +1,47 @@
-section {
-  margin: 20px;
-  text-align: center;
-  height: 600px;
+.home__image-contact-data {
+  display: grid;
+  grid-template-columns: 1.7fr 0.3fr;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: var(--mb-2);
+}
+
+.home__blob {
+  display: flex;
+  margin: auto;
+  max-height: 250px;
+  fill: var(--first-color);
+  .home__blog-img {
+    width: 150px;
+  }
+}
+
+.home__info {
+  .home__title {
+    color: var(--title-color);
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-0-25);
+  }
+
+  .home__subtitle {
+    color: var(--text-color);
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+  }
+}
+
+.home__contact-data {
+}
+
+.home__contact-item {
+  margin: 1rem;
+  .home__contact-link {
+    color: var(--text-color);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    transition: color 200ms ease-in;
+    &:hover {
+      color: var(--first-color);
+    }
+  }
 }
