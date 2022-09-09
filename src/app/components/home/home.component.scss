@@ -9,10 +9,10 @@
 .home__blob {
   display: flex;
   margin: auto;
-  max-height: 250px;
+  max-height: 320px;
   fill: var(--first-color);
   .home__blog-img {
-    width: 150px;
+    width: 145px;
   }
 }
 
@@ -41,12 +41,6 @@
   .home__subtitle {
     color: var(--text-color);
     font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-0-75);
-  }
-
-  .home__paragraph {
-    color: var(--text-color);
-    font-size: var(--normal-font-size);
     margin-bottom: var(--mb-0-75);
   }
 }
