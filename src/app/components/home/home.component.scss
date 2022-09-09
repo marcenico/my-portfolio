@@ -1,3 +1,7 @@
+.home {
+  margin-bottom: var(--mb-2);
+}
+
 .home__image-contact-data {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -35,12 +39,11 @@
   .home__title {
     color: var(--title-color);
     font-size: var(--big-font-size);
-    margin-bottom: var(--mb-0-25);
+    margin-bottom: var(--mb-0-5);
   }
 
   .home__subtitle {
     color: var(--text-color);
     font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-0-75);
   }
 }
