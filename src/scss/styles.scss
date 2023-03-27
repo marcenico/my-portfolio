@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
 
+//Settings
+@import '1-settings/settings';
+
+//Tools - (funcs - mixins)
+@import '2-tools/funtions';
+@import '2-tools/mixins';
+
+//Generic
+@import '3-generic/generic';
+
+//Tags
+@import '4-tags/tags';
+
+//Objects
+@import '5-objects/container';
+
+//Utilities
+@import '6-utilities/utilities';
+
 /*#region Base */
 * {
   box-sizing: border-box;

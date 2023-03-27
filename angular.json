@@ -30,7 +30,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles-theme.scss", "src/styles.scss"],
+            "styles": ["src/scss/styles-theme.scss", "src/scss/styles.scss"],
             "stylePreprocessorOptions": {
               "includePaths": ["src"]
             },
