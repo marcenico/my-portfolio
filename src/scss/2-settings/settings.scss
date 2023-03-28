@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
+
 :root {
   --header-height: 3.5rem;
 
@@ -55,11 +57,8 @@
   --z-fixed: 100;
   --z-modal: 1000;
   /*#endregion Z Index */
-}
 
-/* Font size for large devices */
-@media screen and (min-width: 968px) {
-  :root {
+  @include md {
     --big-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;

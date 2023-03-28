@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap');
+//Tools - (funcs - mixins)
+@import '1-tools/funtions';
+@import '1-tools/mixins';
 
 //Settings
-@import '1-settings/settings';
-
-//Tools - (funcs - mixins)
-@import '2-tools/funtions';
-@import '2-tools/mixins';
+@import '2-settings/settings';
 
 //Generic
 @import '3-generic/generic';
@@ -18,52 +16,6 @@
 
 //Utilities
 @import '6-utilities/utilities';
-
-/*#region Base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  -webkit-tap-highlight-color: transparent;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0 0 var(--header-height) 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-p {
-  color: var(--text-color);
-}
-/*#endregion Base */
 
 /*#region Reusables classes */
 .container {
