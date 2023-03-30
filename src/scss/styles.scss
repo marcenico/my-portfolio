@@ -12,48 +12,14 @@
 @import '4-tags/tags';
 
 //Objects
-@import '5-objects/container';
+@import '5-objects/o-background.scss';
+@import '5-objects/o-container.scss';
+
+//Components
+@import '6-components/c-button.scss';
 
 //Utilities
-@import '6-utilities/utilities';
-
-/*#region Reusables classes */
-.container {
-  max-width: 480px;
-  padding: 1.5rem;
-  margin: auto;
-}
-
-.button {
-  display: inline-block;
-  background-color: var(--first-color);
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border-radius: 2rem;
-  font-weight: var(--font-medium);
-  box-shadow: 1px 1px 3px 1px #00000066;
-  &:hover {
-    background-color: var(--first-color-alt);
-  }
-  .button__icon {
-    font-size: 1.25rem;
-    margin-left: var(--mb-0-5);
-    transition: 200ms ease-in;
-  }
-}
-
-.button--flex {
-  display: inline-flex;
-  align-items: center;
-}
-
-.bg-gradient {
-  background: var(--first-color);
-}
-
-.w-100 {
-  width: 100%;
-}
+@import '7-utilities/utilities';
 
 .elem-hover {
   transition: 200ms ease-in;
@@ -61,4 +27,3 @@
     transform: scale(1.1);
   }
 }
-/*#endregion Reusables classes */
