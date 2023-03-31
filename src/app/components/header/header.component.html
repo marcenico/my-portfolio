@@ -4,36 +4,36 @@
   <!-- Links -->
   <div class="nav__menu o-bg-color--first-color" [ngClass]="showMenu ? 'nav__menu--open' : 'nav__menu--close'">
     <ul class="nav__list">
-      <li class="nav__item elem-hover">
+      <li class="nav__item">
         <a href="#" class="nav__link" (click)="goTo('home'); toggleMenu()"
           ><i class="uil uil-estate nav__icon"></i>Home</a
         >
       </li>
-      <li class="nav__item elem-hover">
+      <li class="nav__item">
         <a href="#" class="nav__link" (click)="goTo('about'); toggleMenu()"
           ><i class="uil uil-user-circle nav__icon"></i>About</a
         >
       </li>
-      <li class="nav__item elem-hover">
+      <li class="nav__item">
         <a href="#" class="nav__link" (click)="goTo('portfolio'); toggleMenu()"
           ><i class="uil uil-file-alt nav__icon"></i>Portfolio</a
         >
       </li>
-      <li class="nav__item elem-hover">
+      <li class="nav__item">
         <a href="#" class="nav__link" (click)="goTo('skills'); toggleMenu()"
           ><i class="uil uil-bolt nav__icon"></i>Skills
         </a>
       </li>
-      <li class="nav__item elem-hover">
+      <li class="nav__item">
         <a href="#" class="nav__link" (click)="goTo('contactme'); toggleMenu()"
           ><i class="uil uil-comment-alt-notes nav__icon"></i>Contact me
         </a>
       </li>
     </ul>
-    <i class="uil uil-times nav__close-btn elem-hover" (click)="toggleMenu()"></i>
+    <i class="uil uil-times nav__close-btn" (click)="toggleMenu()"></i>
   </div>
 
-  <div class="btn-open-menu elem-hover" (click)="toggleMenu()">
+  <div class="nav__open-button" (click)="toggleMenu()">
     <i class="uil uil-apps nav__icon"></i>
   </div>
 </nav>

@@ -28,3 +28,10 @@
     @content;
   }
 }
+
+@mixin elem-hover {
+  transition: 200ms ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

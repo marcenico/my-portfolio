@@ -1,29 +1,36 @@
+@import 'scss/1-tools/mixins.scss';
+
 .home {
   margin-bottom: var(--mb-2);
-}
 
-.home__image-contact-data {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  justify-items: center;
-  align-items: center;
-  margin-bottom: var(--mb-2);
-}
-
-.home__blob {
-  display: flex;
-  margin: auto;
-  max-height: 320px;
-  fill: var(--first-color);
-  .home__blog-img {
-    width: 145px;
+  &__avatar-and-data {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: var(--mb-2);
   }
-}
 
-.home__contact-data {
-  .home__contact-item {
-    margin: 1rem 0;
-    .home__contact-link {
+  &__avatar-blob {
+    display: flex;
+    margin: auto;
+    max-height: 320px;
+    fill: var(--first-color);
+
+    &-img {
+      width: 145px;
+    }
+  }
+
+  &__contact {
+    &-data {
+    }
+    &-item {
+      margin: 1rem 0;
+      @include elem-hover;
+    }
+
+    &-link {
       color: var(--text-color);
       font-size: var(--h1-font-size);
       font-weight: var(--font-semi-bold);
@@ -33,16 +40,14 @@
       }
     }
   }
-}
 
-.home__info {
-  .home__title {
+  &__title {
     color: var(--title-color);
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-5);
   }
 
-  .home__subtitle {
+  &__subtitle {
     color: var(--text-color);
     font-size: var(--h2-font-size);
   }
