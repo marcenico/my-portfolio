@@ -1,8 +1,9 @@
-<nav class="nav o-bg-color" role="navigation">
+<nav class="nav o-bg" role="navigation">
   <!-- Main title/Logo -->
   <a href="#" class="o-title-2 o-title--semi-bold o-title--light">marcenico</a>
+
   <!-- Links -->
-  <div class="nav__menu o-bg-color--first-color" [ngClass]="showMenu ? 'nav__menu--open' : 'nav__menu--close'">
+  <div class="nav__menu o-bg" [ngClass]="showMenu ? 'nav__menu--open' : 'nav__menu--close'">
     <ul class="nav__list">
       <li class="nav__item">
         <a href="#" class="nav__link o-text-2 o-text--light o-text--semi-bold" (click)="goTo('home'); toggleMenu()"
