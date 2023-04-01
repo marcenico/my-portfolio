@@ -1,8 +1,6 @@
 @import 'scss/1-tools/mixins.scss';
 
 .home {
-  margin-bottom: var(--mb-2);
-
   &__avatar-and-data {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -24,29 +22,14 @@
 
   &__contact {
     &-item {
-      margin: 1rem 0;
       @include elem-hover;
     }
 
     &-link {
-      color: var(--text-color);
-      font-size: var(--h1-font-size);
-      font-weight: var(--font-semi-bold);
       transition: color 200ms ease-in;
       &:hover {
         color: var(--first-color);
       }
     }
-  }
-
-  &__title {
-    color: var(--title-color);
-    font-size: var(--big-font-size);
-    margin-bottom: var(--mb-0-5);
-  }
-
-  &__subtitle {
-    color: var(--text-color);
-    font-size: var(--h2-font-size);
   }
 }

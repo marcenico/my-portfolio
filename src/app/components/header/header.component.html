@@ -1,39 +1,39 @@
-<nav class="nav o-bg-color--first-color" role="navigation">
+<nav class="nav o-bg-color" role="navigation">
   <!-- Main title/Logo -->
-  <a href="#" class="nav__main-title">marcenico</a>
+  <a href="#" class="o-title-2 o-title--semi-bold o-title--light">marcenico</a>
   <!-- Links -->
   <div class="nav__menu o-bg-color--first-color" [ngClass]="showMenu ? 'nav__menu--open' : 'nav__menu--close'">
     <ul class="nav__list">
       <li class="nav__item">
-        <a href="#" class="nav__link" (click)="goTo('home'); toggleMenu()"
-          ><i class="uil uil-estate nav__icon"></i>Home</a
+        <a href="#" class="nav__link o-text-2 o-text--light o-text--semi-bold" (click)="goTo('home'); toggleMenu()"
+          ><i class="uil uil-estate o-title-3 o-title--light"></i>Home</a
         >
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link" (click)="goTo('about'); toggleMenu()"
-          ><i class="uil uil-user-circle nav__icon"></i>About</a
+        <a href="#" class="nav__link o-text-2 o-text--light o-text--semi-bold" (click)="goTo('about'); toggleMenu()"
+          ><i class="uil uil-user-circle o-title-3 o-title--light"></i>About</a
         >
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link" (click)="goTo('portfolio'); toggleMenu()"
-          ><i class="uil uil-file-alt nav__icon"></i>Portfolio</a
+        <a href="#" class="nav__link o-text-2 o-text--light o-text--semi-bold" (click)="goTo('portfolio'); toggleMenu()"
+          ><i class="uil uil-file-alt o-title-3 o-title--light"></i>Portfolio</a
         >
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link" (click)="goTo('skills'); toggleMenu()"
-          ><i class="uil uil-bolt nav__icon"></i>Skills
+        <a href="#" class="nav__link o-text-2 o-text--light o-text--semi-bold" (click)="goTo('skills'); toggleMenu()"
+          ><i class="uil uil-bolt o-title-3 o-title--light"></i>Skills
         </a>
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link" (click)="goTo('contactme'); toggleMenu()"
-          ><i class="uil uil-comment-alt-notes nav__icon"></i>Contact me
+        <a href="#" class="nav__link o-text-2 o-text--light o-text--semi-bold" (click)="goTo('contactme'); toggleMenu()"
+          ><i class="uil uil-comment-alt-notes o-title-3 o-title--light"></i>Contact me
         </a>
       </li>
     </ul>
-    <i class="uil uil-times nav__close-btn" (click)="toggleMenu()"></i>
+    <i class="uil uil-times nav__close-btn o-title-3 o-title--light" (click)="toggleMenu()"></i>
   </div>
 
   <div class="nav__open-button" (click)="toggleMenu()">
-    <i class="uil uil-apps nav__icon"></i>
+    <i class="uil uil-apps o-title-3 o-title--light"></i>
   </div>
 </nav>
