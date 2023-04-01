@@ -12,8 +12,12 @@
   &__avatar-blob {
     display: flex;
     margin: auto;
-    max-height: 320px;
+    max-height: 220px;
     fill: var(--first-color);
+
+    @include md {
+      max-height: 320px;
+    }
 
     &-img {
       width: 145px;
