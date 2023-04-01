@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap);
+
 //Tools - (funcs - mixins)
 @import '1-tools/funtions';
 @import '1-tools/mixins';
@@ -12,11 +14,14 @@
 @import '4-tags/tags';
 
 //Objects
-@import '5-objects/o-background.scss';
-@import '5-objects/o-container.scss';
+@import '5-objects/o-background';
+@import '5-objects/o-container';
+@import '5-objects/o-margin';
+@import '5-objects/o-text';
+@import '5-objects/o-title';
 
 //Components
-@import '6-components/c-button.scss';
+@import '6-components/c-button';
 
 //Utilities
 @import '7-utilities/utilities';
