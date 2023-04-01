@@ -65,8 +65,16 @@
     @include elem-hover;
   }
 
-  &__open-button {
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__button {
     cursor: pointer;
     @include elem-hover;
+    &--mr {
+      margin-right: 1.5rem;
+    }
   }
 }

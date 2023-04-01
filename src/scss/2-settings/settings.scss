@@ -20,6 +20,7 @@
   --scroll-bar-color: hsl(var(--hue), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue), 12%, 80%);
   --shadow-color: hsl(0, 0%, 65%);
+
   /*#endregion Change favorite color */
 
   /*#region Font and typography */
@@ -67,28 +68,25 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
   }
+}
 
-  @media (prefers-color-scheme: dark) {
-    /* Colors */
-    /*#region Change favorite color */
-    --hue: 270;
-    --saturation: 70%;
-    --lightness: 45%;
+[data-theme='dark'] {
+  --hue: 270;
+  --saturation: 70%;
+  --lightness: 45%;
 
-    /* HSL color mode */
-    --first-color: hsl(var(--hue), var(--saturation), var(--lightness));
-    --second-color: hsl(calc(var(--hue) - 250), var(--saturation), var(--lightness));
-    --first-color-alt: hsl(var(--hue), 57%, 53%);
-    --first-color-light: hsl(var(--hue), 100%, 100%);
-    --title-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45% ));
-    --text-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
-    --text-color-light: hsl(var(--hue), 56%, 95%);
-    --input-color: hsl(var(--hue), 70%, 96%);
-    --body-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) * 0.25));
-    --container-color: #fff;
-    --scroll-bar-color: hsl(var(--hue), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue), 12%, 80%);
-    --shadow-color: hsl(0, 0%, 20%);
-    /*#endregion Change favorite color */
-  }
+  /* HSL color mode */
+  --first-color: hsl(var(--hue), var(--saturation), var(--lightness));
+  --second-color: hsl(calc(var(--hue) - 250), var(--saturation), var(--lightness));
+  --first-color-alt: hsl(var(--hue), 57%, 53%);
+  --first-color-light: hsl(var(--hue), 100%, 100%);
+  --title-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
+  --text-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
+  --text-color-light: hsl(var(--hue), 56%, 95%);
+  --input-color: hsl(var(--hue), 70%, 96%);
+  --body-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) * 0.25));
+  --container-color: #fff;
+  --scroll-bar-color: hsl(var(--hue), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue), 12%, 80%);
+  --shadow-color: hsl(0, 0%, 20%);
 }

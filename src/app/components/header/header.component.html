@@ -34,7 +34,16 @@
     <i class="uil uil-times nav__close-btn o-title-3 o-title--light" (click)="toggleMenu()"></i>
   </div>
 
-  <div class="nav__open-button" (click)="toggleMenu()">
-    <i class="uil uil-apps o-title-3 o-title--light"></i>
+  <div class="nav__buttons">
+    <div class="nav__button nav__button--mr" (click)="toggleTheme()">
+      <i
+        class="uil o-title-3 o-title--light"
+        [ngClass]="{ 'uil-sun': getTheme() === 'dark', 'uil-moon': getTheme() === 'light' }"
+      ></i>
+    </div>
+
+    <div class="nav__button" (click)="toggleMenu()">
+      <i class="uil uil-apps o-title-3 o-title--light"></i>
+    </div>
   </div>
 </nav>
