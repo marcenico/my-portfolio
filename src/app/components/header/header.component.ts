@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
   }
 
   @HostListener('document:click', ['$event'])
-  clickOut(event: any) {
+  clickout(event: any) {
     if (this.eRef.nativeElement.contains(event.target)) {
       this.isClickInside = true;
     } else {

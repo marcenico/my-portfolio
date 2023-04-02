@@ -35,14 +35,14 @@
   </div>
 
   <div class="nav__buttons">
-    <div class="nav__button nav__button--mr" (click)="toggleTheme()">
+    <div class="nav__button" (click)="toggleTheme()">
       <i
         class="uil o-title-3 o-title--light"
-        [ngClass]="{ 'uil-sun': getTheme() === 'dark', 'uil-moon': getTheme() === 'light' }"
+        [ngClass]="{ 'uil-sun': getTheme() === 'dark', 'uil-moon': getTheme() !== 'dark' }"
       ></i>
     </div>
 
-    <div class="nav__button" (click)="toggleMenu()">
+    <div class="nav__button nav__button--ml u-d-none@md" (click)="toggleMenu()">
       <i class="uil uil-apps o-title-3 o-title--light"></i>
     </div>
   </div>

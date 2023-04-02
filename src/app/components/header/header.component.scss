@@ -5,6 +5,13 @@
   bottom: 0;
   left: 0;
   width: 100%;
+
+  @include md {
+    top: 0;
+    bottom: unset;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .nav {
@@ -26,14 +33,31 @@
     -webkit-box-shadow: -1px -1px 5px -1px #000000bf;
     -moz-box-shadow: -1px -1px 5px -1px #000000bf;
 
-    &--close {
-      transition: transform 600ms ease;
-      transform: translateY(110%);
+    @include md {
+      position: relative;
+      padding: 0;
+      box-shadow: unset;
+      background-color: unset;
     }
 
     &--open {
       transition: transform 600ms ease;
-      transform: translateY(0);
+      transform: translateY(0%);
+
+      @include md {
+        transition: unset;
+        transform: unset;
+      }
+    }
+
+    &--close {
+      transition: transform 600ms ease;
+      transform: translateY(110%);
+
+      @include md {
+        transition: unset;
+        transform: unset;
+      }
     }
   }
 
@@ -43,18 +67,39 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0.5rem;
     grid-row-gap: 2.5rem;
+
+    @include md {
+      grid-template-columns: repeat(5, auto);
+      grid-template-rows: repeat(1, 1fr);
+      grid-column-gap: 0;
+      margin: 0 4rem;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     @include elem-hover;
+
+    @include md {
+      &:not(:first-child) {
+        border-left: hsla(0, 0%, 100%, 0.286) solid 1px;
+      }
+      padding: 0 1.5rem;
+    }
   }
 
   &__link {
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @include md {
+      flex-direction: row;
+    }
   }
 
   &__close-btn {
@@ -63,6 +108,10 @@
     right: 1.5rem;
     bottom: 1.5rem;
     @include elem-hover;
+
+    @include md {
+      display: none;
+    }
   }
 
   &__buttons {
@@ -73,8 +122,9 @@
   &__button {
     cursor: pointer;
     @include elem-hover;
-    &--mr {
-      margin-right: 1.5rem;
+
+    &--ml {
+      margin-left: 1.5rem;
     }
   }
 }

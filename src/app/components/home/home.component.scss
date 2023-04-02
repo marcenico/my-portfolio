@@ -2,16 +2,15 @@
 
 .home {
   &__avatar-and-data {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: var(--mb-2);
   }
 
   &__avatar-blob {
     display: flex;
-    margin: auto;
+    margin-right: 2rem;
     max-height: 220px;
     fill: var(--first-color);
 
