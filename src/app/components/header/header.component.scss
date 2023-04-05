@@ -40,7 +40,7 @@
       background-color: unset;
     }
 
-    &--open {
+    &.is-open {
       transition: transform 600ms ease;
       transform: translateY(0%);
 
@@ -50,7 +50,7 @@
       }
     }
 
-    &--close {
+    &.is-close {
       transition: transform 600ms ease;
       transform: translateY(110%);
 
@@ -83,9 +83,12 @@
     @include elem-hover;
 
     @include md {
-      &:not(:first-child) {
+      &--border-left {
         border-left: hsla(0, 0%, 100%, 0.286) solid 1px;
       }
+      // &:not(:first-child) {
+      //   border-left: hsla(0, 0%, 100%, 0.286) solid 1px;
+      // }
       padding: 0 1.5rem;
     }
   }
