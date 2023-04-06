@@ -13,7 +13,7 @@ import { ThemeService } from '../../services/theme.service';
 export class HeaderComponent implements OnInit {
   showMenu = false;
   isClickInside = false;
-  hideOpenCloseMenuStates = false;
+  hideOpenCloseMenuStates = true;
 
   constructor(private scroller: ViewportScroller, private eRef: ElementRef, private themeService: ThemeService) {}
 
@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleMenu() {
+    this.hideOpenCloseMenuStates = false;
     this.showMenu = !this.showMenu;
   }
 
