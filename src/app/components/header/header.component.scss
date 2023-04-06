@@ -29,9 +29,9 @@
     width: 100%;
     padding: 2.5rem 0.5rem;
     border-radius: 0.75rem 0.75rem 0 0;
-    box-shadow: -1px -1px 5px -1px #000000bf;
     -webkit-box-shadow: -1px -1px 5px -1px #000000bf;
     -moz-box-shadow: -1px -1px 5px -1px #000000bf;
+    box-shadow: -1px -1px 5px -1px #000000bf;
     transform: translateY(110%);
 
     @include md {
@@ -75,10 +75,11 @@
     @include elem-hover;
 
     @include md {
-      &:not(:first-child) {
+      padding: 0 1.5rem;
+
+      &--border-left {
         border-left: hsla(0, 0%, 100%, 0.286) solid 1px;
       }
-      padding: 0 1.5rem;
     }
   }
 
