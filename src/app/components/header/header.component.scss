@@ -32,32 +32,24 @@
     box-shadow: -1px -1px 5px -1px #000000bf;
     -webkit-box-shadow: -1px -1px 5px -1px #000000bf;
     -moz-box-shadow: -1px -1px 5px -1px #000000bf;
+    transform: translateY(110%);
 
     @include md {
       position: relative;
       padding: 0;
       box-shadow: unset;
       background-color: unset;
+      transform: unset;
     }
 
-    &--open {
+    &.is-open {
       transition: transform 600ms ease;
       transform: translateY(0%);
-
-      @include md {
-        transition: unset;
-        transform: unset;
-      }
     }
 
-    &--close {
+    &.is-close {
       transition: transform 600ms ease;
       transform: translateY(110%);
-
-      @include md {
-        transition: unset;
-        transform: unset;
-      }
     }
   }
 

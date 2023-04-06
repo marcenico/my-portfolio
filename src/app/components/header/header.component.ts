@@ -1,34 +1,26 @@
 import { Component, ElementRef, OnInit, HostListener } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  host: {
+    '(window:resize)': 'onResize($event)'
+  }
 })
 export class HeaderComponent implements OnInit {
   showMenu = false;
   isClickInside = false;
+  hideOpenCloseMenuStates = false;
 
-  constructor(private scroller: ViewportScroller, private eRef: ElementRef) {}
+  constructor(private scroller: ViewportScroller, private eRef: ElementRef, private themeService: ThemeService) {}
 
   ngOnInit(): void {}
 
   toggleTheme() {
-    switch (localStorage.getItem('theme')) {
-      case 'light':
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-        break;
-      case 'dark':
-        localStorage.setItem('theme', 'light');
-        document.documentElement.setAttribute('data-theme', 'light');
-        break;
-      default:
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-        break;
-    }
+    this.themeService.toggleTheme();
   }
 
   toggleMenu() {
@@ -50,6 +42,16 @@ export class HeaderComponent implements OnInit {
   }
 
   getTheme() {
-    return localStorage.getItem('theme');
+    return this.themeService.getTheme();
+  }
+
+  onResize($event: any) {
+    if ($event.target.innerWidth >= 1101) {
+      this.showMenu = false;
+      this.hideOpenCloseMenuStates = true;
+      return;
+    }
+
+    this.hideOpenCloseMenuStates = false;
   }
 }
