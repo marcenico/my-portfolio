@@ -21,6 +21,22 @@
   height: var(--header-height);
   padding: 0 1.5rem;
 
+  &--bg-color {
+    background-color: var(--first-color);
+
+    @include md {
+      background-color: var(--body-color);
+    }
+  }
+
+  &__logo {
+    color: var(--text-color-light);
+
+    @include md {
+      color: unset;
+    }
+  }
+
   &__menu {
     position: fixed;
     left: 0;
@@ -33,6 +49,9 @@
     -moz-box-shadow: -1px -1px 5px -1px #000000bf;
     box-shadow: -1px -1px 5px -1px #000000bf;
     transform: translateY(110%);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 
     @include md {
       position: relative;
@@ -72,13 +91,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: var(--text-color-light);
+
     @include elem-hover;
 
     @include md {
+      color: unset;
       padding: 0 1.5rem;
 
-      &--border-left {
-        border-left: hsla(0, 0%, 100%, 0.286) solid 1px;
+      &.is-active {
+        background-color: var(--first-color);
+        color: var(--text-color-light);
       }
     }
   }
@@ -114,10 +137,15 @@
 
   &__button {
     cursor: pointer;
+    color: var(--text-color-light);
     @include elem-hover;
 
     &--ml {
       margin-left: 1.5rem;
+    }
+
+    @include md {
+      color: unset;
     }
   }
 }

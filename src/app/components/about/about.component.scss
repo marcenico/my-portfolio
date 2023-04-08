@@ -1,4 +1,12 @@
+@import 'scss/1-tools/mixins.scss';
+
 .about {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - var(--header-height));
+
   &__info {
     display: grid;
     grid-template-columns: auto auto;

@@ -1,11 +1,17 @@
 @import 'scss/1-tools/mixins.scss';
 
 .home {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - var(--header-height));
+
   &__avatar-and-data {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: var(--mb-2);
+    margin: var(--mb-2) 0;
   }
 
   &__avatar-blob {

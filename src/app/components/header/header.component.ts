@@ -7,28 +7,34 @@ import { ThemeService } from '../../services/theme.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   host: {
-    '(window:resize)': 'onResize($event)'
+    '(window:resize)': 'onResize($event.target.innerWidth)'
   }
 })
 export class HeaderComponent implements OnInit {
   showMenu = false;
   isClickInside = false;
   hideOpenCloseMenuStates = true;
+  activeSection = 'home';
 
   constructor(private scroller: ViewportScroller, private eRef: ElementRef, private themeService: ThemeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.onResize(window.innerWidth);
+    this.scroller.setOffset([0, 100]);
+    this.scroller.scrollToAnchor('home');
+  }
 
   toggleTheme() {
     this.themeService.toggleTheme();
   }
 
   toggleMenu() {
-    this.hideOpenCloseMenuStates = false;
     this.showMenu = !this.showMenu;
   }
 
   goTo(id: string) {
+    if (this.activeSection === id) return;
+    this.activeSection = id;
     this.scroller.scrollToAnchor(id);
   }
 
@@ -46,8 +52,8 @@ export class HeaderComponent implements OnInit {
     return this.themeService.getTheme();
   }
 
-  onResize($event: any) {
-    if ($event.target.innerWidth >= 1101) {
+  onResize(width: any) {
+    if (width >= 1101) {
       this.showMenu = false;
       this.hideOpenCloseMenuStates = true;
       return;

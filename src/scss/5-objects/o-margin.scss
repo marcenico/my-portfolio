@@ -20,4 +20,10 @@
   &-2-5 {
     margin-bottom: var(--mb-2-5);
   }
+
+  @include md {
+    &-unset\@md {
+      margin-bottom: unset;
+    }
+  }
 }

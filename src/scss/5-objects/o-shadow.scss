@@ -1,3 +1,15 @@
 .o-shadow {
-  text-shadow: 1px 2px 2px var(--shadow-color);
+  &-bottom {
+    -webkit-box-shadow: 0px 3px 6px -6px var(--shadow-color);
+    -moz-box-shadow: 0px 3px 6px -6px var(--shadow-color);
+    box-shadow: 0px 3px 6px -6px var(--shadow-color);
+
+    @include md {
+      &\@md {
+        -webkit-box-shadow: 0px 3px 6px -6px var(--shadow-color);
+        -moz-box-shadow: 0px 3px 6px -6px var(--shadow-color);
+        box-shadow: 0px 3px 6px -6px var(--shadow-color);
+      }
+    }
+  }
 }
