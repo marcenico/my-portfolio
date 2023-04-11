@@ -7,23 +7,24 @@
     <ul class="nav__list">
       <li class="nav__item" [ngClass]="{ 'is-active': activeSection === 'home' }">
         <a class="nav__link o-text-2 o-text--semi-bold" (click)="goTo('home'); toggleMenu()"
-          ><i class="uil uil-estate o-title-3"></i>Home</a
-        >
+          ><i class="uil uil-estate o-title-3"></i>Home
+        </a>
       </li>
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'about' }">
         <a class="nav__link o-text-2 o-text--semi-bold" (click)="goTo('about'); toggleMenu()"
-          ><i class="uil uil-user-circle o-title-3"></i>About</a
-        >
-      </li>
-      <!-- <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'portfolio' }">
-        <a class="nav__link o-text-2 o-text--semi-bold" (click)="goTo('portfolio'); toggleMenu()"
-          ><i class="uil uil-file-alt o-title-3"></i>Portfolio</a
-        >
+          ><i class="uil uil-user-circle o-title-3"></i>About
+        </a>
       </li>
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'skills' }">
         <a class="nav__link o-text-2 o-text--semi-bold" (click)="goTo('skills'); toggleMenu()"
           ><i class="uil uil-bolt o-title-3"></i>Skills
         </a>
+      </li>
+
+      <!-- <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'portfolio' }">
+        <a class="nav__link o-text-2 o-text--semi-bold" (click)="goTo('portfolio'); toggleMenu()"
+          ><i class="uil uil-file-alt o-title-3"></i>Portfolio</a
+        >
       </li>
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'contactme' }">
         <a class="nav__link o-text-2 o-text--semi-bold" (click)="goTo('contactme'); toggleMenu()"
