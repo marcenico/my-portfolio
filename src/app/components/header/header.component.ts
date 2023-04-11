@@ -20,7 +20,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.onResize(window.innerWidth);
-    this.scroller.setOffset([0, 100]);
     this.scroller.scrollToAnchor('home');
   }
 
@@ -33,7 +32,6 @@ export class HeaderComponent implements OnInit {
   }
 
   goTo(id: string) {
-    if (this.activeSection === id) return;
     this.activeSection = id;
     this.scroller.scrollToAnchor(id);
   }
