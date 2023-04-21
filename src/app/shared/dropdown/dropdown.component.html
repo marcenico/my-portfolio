@@ -1,0 +1,29 @@
+<div class="o-dropdown">
+  <div class="o-dropdown__header">
+    <i [class]="'o-dropdown__icon uil ' + icon"></i>
+
+    <div class="o-dropdown__text">
+      <h3>{{ title }}</h3>
+      <p class="o-dropdown__subtitle">{{ subtitle }}</p>
+    </div>
+
+    <i
+      class="o-dropdown__arrow-btn uil"
+      [ngClass]="{ 'uil-angle-down': showItems, 'uil-angle-up': !showItems }"
+      (click)="toggleDropdown()"
+    ></i>
+  </div>
+
+  <!-- SKILLS CONTENT -->
+  <div class="o-dropdown__items-container" [ngClass]="{ 'is-show': showItems, 'is-hide': !showItems }">
+    <div class="o-dropdown__item" *ngFor="let dropdownItem of dropdownItems">
+      <div class="o-dropdown__item-header">
+        <h4>{{ dropdownItem.name }}</h4>
+        <span class="o-dropdown__subtitle">{{ dropdownItem.percent }}%</span>
+      </div>
+      <div class="o-dropdown__item-progress-bar">
+        <div class="o-dropdown__item-progress-bar-fill" [style]="'width: ' + dropdownItem.percent + '%'"></div>
+      </div>
+    </div>
+  </div>
+</div>

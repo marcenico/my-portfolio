@@ -30,7 +30,7 @@
   }
 
   &__logo {
-    color: var(--text-color-light);
+    color: var(--text-color-white);
 
     @include md {
       color: unset;
@@ -91,7 +91,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--text-color-light);
+    color: var(--text-color-white);
     transition: background-color 300ms ease;
 
     @include md {
@@ -100,7 +100,7 @@
 
       &.is-active {
         background-color: var(--first-color);
-        color: var(--text-color-light);
+        color: var(--text-color-white);
       }
     }
   }
@@ -136,7 +136,7 @@
 
   &__button {
     cursor: pointer;
-    color: var(--text-color-light);
+    color: var(--text-color-white);
     @include elem-hover;
 
     &--ml {
