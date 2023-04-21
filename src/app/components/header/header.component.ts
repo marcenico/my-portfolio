@@ -1,6 +1,8 @@
-import { Component, ElementRef, OnInit, HostListener } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { ThemeService } from '../../services/theme.service';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/services/theme.service';
+
+const HOME_SECTION_ID = 'home';
 
 @Component({
   selector: 'app-header',
@@ -14,13 +16,13 @@ export class HeaderComponent implements OnInit {
   showMenu = false;
   isClickInside = false;
   hideOpenCloseMenuStates = true;
-  activeSection = 'home';
+  activeSection = HOME_SECTION_ID;
 
   constructor(private scroller: ViewportScroller, private eRef: ElementRef, private themeService: ThemeService) {}
 
   ngOnInit(): void {
     this.onResize(window.innerWidth);
-    this.scroller.scrollToAnchor('home');
+    this.scroller.scrollToAnchor(HOME_SECTION_ID);
   }
 
   toggleTheme() {
@@ -31,27 +33,30 @@ export class HeaderComponent implements OnInit {
     this.showMenu = !this.showMenu;
   }
 
-  goTo(id: string) {
-    this.activeSection = id;
-    this.scroller.scrollToAnchor(id);
+  goTo(sectionId: string) {
+    this.activeSection = sectionId;
+    this.scroller.scrollToAnchor(sectionId);
   }
 
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
-    if (this.eRef.nativeElement.contains(event.target)) {
-      this.isClickInside = true;
-    } else {
-      if (this.isClickInside && this.showMenu) this.toggleMenu();
+    if (!this.eRef.nativeElement.contains(event.target)) {
+      this.isClickInside && this.showMenu ? this.toggleMenu() : null;
       this.isClickInside = false;
+      return;
     }
+
+    this.isClickInside = true;
   }
 
   getTheme() {
     return this.themeService.getTheme();
   }
 
-  onResize(width: any) {
-    if (width >= 1101) {
+  onResize(width: number) {
+    const BREAKPOINT_WIDTH = 1101;
+
+    if (width >= BREAKPOINT_WIDTH) {
       this.showMenu = false;
       this.hideOpenCloseMenuStates = true;
       return;
