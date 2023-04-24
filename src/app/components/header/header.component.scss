@@ -1,6 +1,7 @@
 @import 'scss/1-tools/mixins.scss';
 
 :host {
+  z-index: var(--z-fixed);
   position: fixed;
   bottom: 0;
   left: 0;
