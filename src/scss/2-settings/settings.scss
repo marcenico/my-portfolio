@@ -20,7 +20,7 @@
   --body-color: hsl(var(--hue), 70%, 100%);
   --container-color: #fff;
   --shadow-color: hsl(0, 0%, 65%);
-
+  --swiper-theme-color: var(--first-color);
   /*#endregion Change favorite color */
 
   /*#region Font and typography */
@@ -88,4 +88,5 @@
   --body-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) * 0.25));
   --container-color: #fff;
   --shadow-color: hsl(0, 0%, 20%);
+  --swiper-theme-color: var(--first-color);
 }
