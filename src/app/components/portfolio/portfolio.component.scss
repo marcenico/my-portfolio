@@ -21,12 +21,30 @@
     display: flex;
     flex-direction: column;
     padding: 0 0.5rem;
+    @include md {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__data {
+    @include md {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      max-width: 384px;
+    }
   }
 
   &__img {
     align-self: center;
-    width: 90%;
+    width: 85%;
     max-width: 256px;
     border-radius: 0.5rem;
+
+    @include md {
+      width: 100%;
+    }
   }
 }

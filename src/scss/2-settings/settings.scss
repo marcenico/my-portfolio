@@ -65,6 +65,9 @@
   --swiper-pagination-bottom: 0;
   --swiper-theme-color: var(--first-color);
   --swiper-navigation-sides-offset: 0;
+  @include md {
+    --swiper-navigation-top-offset: 45%;
+  }
   /*#endregion Others */
 
   @include md {
