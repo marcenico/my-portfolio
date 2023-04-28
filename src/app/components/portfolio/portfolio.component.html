@@ -3,14 +3,56 @@
 
   <p class="o-text-4 o-mb-1 o-text--center">Recent work</p>
 
-  <div class="portfolio__content o-grid">
-    <img src="assets/images/my-avatar.svg" alt="" class="portfolio__img" />
+  <swiper-container
+    class="s-swiper-container portfolio__container"
+    slides-per-view="1"
+    speed="500"
+    navigation="true"
+    pagination="true"
+  >
+    <!-- Content 1 -->
+    <swiper-slide class="portfolio__content o-grid">
+      <img src="assets/images/desktop-1.jpg" alt="" class="portfolio__img" />
 
-    <div class="portfolio__data">
-      <h3 class="o-text-3 o-text--center">Project title</h3>
-      <p class="o-text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div class="portfolio__data">
+        <h4 class="o-text-4 o-mb-0-5">Project title 1</h4>
+        <p class="o-text-4 o-mb-0-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 
-      <a href="" class="c-button c-button--inline-flex c-button--ai-center">Demo <i class="uil uil-arrow-right c-button__icon"></i></a>
-    </div>
-  </div>
+        <a href="" class="c-button c-button--inline-flex c-button--ai-center">
+          Demo
+          <i class="uil uil-arrow-right c-button__icon"></i>
+        </a>
+      </div>
+    </swiper-slide>
+
+    <!-- Content 2 -->
+    <swiper-slide class="portfolio__content o-grid">
+      <img src="assets/images/desktop-1.jpg" alt="" class="portfolio__img" />
+
+      <div class="portfolio__data">
+        <h4 class="o-text-4 o-mb-0-5">Project title 2</h4>
+        <p class="o-text-4 o-mb-0-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+        <a href="" class="c-button c-button--inline-flex c-button--ai-center">
+          Demo
+          <i class="uil uil-arrow-right c-button__icon"></i>
+        </a>
+      </div>
+    </swiper-slide>
+
+    <!-- Content 3 -->
+    <swiper-slide class="portfolio__content o-grid">
+      <img src="assets/images/desktop-1.jpg" alt="" class="portfolio__img" />
+
+      <div class="portfolio__data">
+        <h4 class="o-text-4 o-mb-0-5">Project title 3</h4>
+        <p class="o-text-4 o-mb-0-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+        <a href="" class="c-button c-button--inline-flex c-button--ai-center">
+          Demo
+          <i class="uil uil-arrow-right c-button__icon"></i>
+        </a>
+      </div>
+    </swiper-slide>
+  </swiper-container>
 </section>
