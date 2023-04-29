@@ -137,19 +137,69 @@
   &__buttons {
     display: flex;
     flex-direction: row;
-  }
 
-  &__button {
-    cursor: pointer;
-    color: var(--text-color-white);
-    @include elem-hover;
+    &-theme {
+      &-checkbox {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
 
-    &--ml {
-      margin-left: 1.5rem;
+      &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2rem;
+        width: 2rem;
+        &-sun {
+          position: absolute;
+          opacity: 0;
+          transform: scale(0) rotate(360deg);
+          transition: opacity 600ms, transform 200ms cubic-bezier(0.26, 2, 0.46, 0.71);
+          color: var(--text-color-white);
+          @include md {
+            color: unset;
+          }
+        }
+        &-moon {
+          position: absolute;
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+          transition: opacity 600ms, transform 200ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
+          color: var(--text-color-white);
+          @include md {
+            color: unset;
+          }
+        }
+      }
+
+      &-checkbox:checked ~ &-wrapper .nav__buttons-theme-wrapper-sun {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+
+      &-checkbox:checked ~ &-wrapper .nav__buttons-theme-wrapper-moon {
+        opacity: 0;
+        transform: scale(0) rotate(90deg);
+      }
     }
 
-    @include md {
-      color: unset;
+    &-menu {
+      cursor: pointer;
+      color: var(--text-color-white);
+      display: flex;
+      align-items: center;
+      @include elem-hover;
+
+      &--ml {
+        margin-left: 0.5rem;
+      }
+
+      @include md {
+        color: unset;
+      }
     }
   }
 }

@@ -36,11 +36,25 @@
   </div>
 
   <div class="nav__buttons">
-    <div class="nav__button" (click)="toggleTheme()">
-      <i class="uil o-text-3" [ngClass]="{ 'uil-sun': getTheme() === 'dark', 'uil-moon': getTheme() !== 'dark' }"></i>
-    </div>
+    <label class="nav__buttons-theme">
+      <input
+        class="nav__buttons-theme-checkbox"
+        type="checkbox"
+        (click)="toggleTheme()"
+        [checked]="getTheme() === 'dark'"
+      />
+      <div class="nav__buttons-theme-wrapper">
+        <div class="nav__buttons-theme-wrapper-sun">
+          <i class="uil uil-sun o-text-3" data-icon="feather-sun" data-inline="false"></i>
+        </div>
 
-    <div class="nav__button nav__button--ml u-d-none@md" (click)="toggleMenu()">
+        <div class="nav__buttons-theme-wrapper-moon">
+          <i class="uil uil-moon o-text-3" data-icon="feather-moon" data-inline="false"></i>
+        </div>
+      </div>
+    </label>
+
+    <div class="nav__buttons-menu nav__buttons-menu--ml u-d-none@md" (click)="toggleMenu()">
       <i class="uil uil-apps o-text-3"></i>
     </div>
   </div>
