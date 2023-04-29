@@ -5,14 +5,14 @@ import { ThemeService } from 'src/app/services/theme.service';
 const HOME_SECTION_ID = 'home';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
   host: {
     '(window:resize)': 'onResize($event.target.innerWidth)'
   }
 })
-export class HeaderComponent implements OnInit {
+export class NavbarComponent implements OnInit {
   showMenu = false;
   isClickInside = false;
   hideOpenCloseMenuStates = true;
