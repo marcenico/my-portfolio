@@ -42,18 +42,24 @@
     justify-content: center;
     height: 100%;
     width: 2rem;
+    transition: transform 300ms ease-in-out;
+
+    &.is-down {
+      transform: rotate(180deg);
+    }
   }
 
   &__items-container {
     pointer-events: none;
-    transition: all 600ms ease-in-out;
-    transform-origin: top center;
+
     &.is-show {
       transform-origin: top center;
       animation: growDown 600ms ease-in-out forwards;
     }
+
     &.is-hide {
-      display: none;
+      transform-origin: top center;
+      animation: growUp 300ms ease-in-out forwards;
     }
   }
 

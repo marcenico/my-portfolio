@@ -8,8 +8,8 @@
     </div>
 
     <i
-      class="o-dropdown__arrow-btn uil"
-      [ngClass]="{ 'uil-angle-down': showItems, 'uil-angle-up': !showItems }"
+      class="o-dropdown__arrow-btn uil uil-angle-up"
+      [ngClass]="{ 'is-down': showItems }"
       (click)="toggleDropdown()"
     ></i>
   </div>
