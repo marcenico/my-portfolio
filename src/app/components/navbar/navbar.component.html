@@ -3,34 +3,40 @@
   <a href="#" class="nav__logo o-text-2 o-text--semi-bold o-text--white">marcenico</a>
 
   <!-- Links -->
-  <div class="nav__menu nav--bg-color" [ngClass]="hideOpenCloseMenuStates ? '' : !showMenu ? 'is-close' : 'is-open'">
+  <div
+    class="nav__menu nav__menu--bg-color"
+    [ngClass]="hideOpenCloseMenuStates ? '' : !showMenu ? 'is-close' : 'is-open'"
+  >
     <ul class="nav__list">
       <li class="nav__item" [ngClass]="{ 'is-active': activeSection === 'home' }">
-        <a class="nav__link o-text-5 o-text--semi-bold" (click)="goTo('home'); toggleMenu()"
+        <a class="nav__link o-text-5 o-text--white o-text--semi-bold" (click)="goTo('home'); toggleMenu()"
           ><i class="uil uil-estate o-text-3"></i>Home
         </a>
       </li>
+
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'about' }">
-        <a class="nav__link o-text-5 o-text--semi-bold" (click)="goTo('about'); toggleMenu()"
+        <a class="nav__link o-text-5 o-text--white o-text--semi-bold" (click)="goTo('about'); toggleMenu()"
           ><i class="uil uil-user-circle o-text-3"></i>About
         </a>
       </li>
+
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'skills' }">
-        <a class="nav__link o-text-5 o-text--semi-bold" (click)="goTo('skills'); toggleMenu()"
+        <a class="nav__link o-text-5 o-text--white o-text--semi-bold" (click)="goTo('skills'); toggleMenu()"
           ><i class="uil uil-bolt o-text-3"></i>Skills
         </a>
       </li>
 
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'portfolio' }">
-        <a class="nav__link o-text-5 o-text--semi-bold" (click)="goTo('portfolio'); toggleMenu()"
+        <a class="nav__link o-text-5 o-text--white o-text--semi-bold" (click)="goTo('portfolio'); toggleMenu()"
           ><i class="uil uil-file-alt o-text-3"></i>Portfolio
         </a>
       </li>
-      <!-- <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'contactme' }">
-        <a class="nav__link o-text-2 o-text--semi-bold" (click)="goTo('contactme'); toggleMenu()"
+
+      <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'contactme' }">
+        <a class="nav__link o-text-5 o-text--white o-text--semi-bold" (click)="goTo('contactme'); toggleMenu()"
           ><i class="uil uil-comment-alt-notes o-text-3"></i>Contact me
         </a>
-      </li> -->
+      </li>
     </ul>
     <i class="uil uil-times nav__close-btn o-text-3" (click)="toggleMenu()"></i>
   </div>
@@ -44,17 +50,17 @@
         [checked]="getTheme() === 'dark'"
       />
       <div class="nav__buttons-theme-wrapper">
-        <div class="nav__buttons-theme-wrapper-sun">
+        <div class="nav__buttons-theme-wrapper-sun o-text--white">
           <i class="uil uil-sun o-text-3" data-icon="feather-sun" data-inline="false"></i>
         </div>
 
-        <div class="nav__buttons-theme-wrapper-moon">
+        <div class="nav__buttons-theme-wrapper-moon o-text--white">
           <i class="uil uil-moon o-text-3" data-icon="feather-moon" data-inline="false"></i>
         </div>
       </div>
     </label>
 
-    <div class="nav__buttons-menu nav__buttons-menu--ml u-d-none@md" (click)="toggleMenu()">
+    <div class="nav__buttons-menu nav__buttons-menu--ml o-text--white u-d-none@md" (click)="toggleMenu()">
       <i class="uil uil-apps o-text-3"></i>
     </div>
   </div>

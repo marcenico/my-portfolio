@@ -58,6 +58,14 @@
       transform: unset;
     }
 
+    &--bg-color {
+      background-color: var(--first-color);
+
+      @include md {
+        background-color: var(--body-color);
+      }
+    }
+
     &.is-open {
       transition: transform 600ms ease;
       transform: translateY(0%);
@@ -82,7 +90,6 @@
     @include md {
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(1, 1fr);
-      grid-column-gap: 0;
       margin: 0 4rem;
     }
   }
@@ -91,13 +98,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: var(--text-color-white);
     border-radius: 1rem;
     transition: background-color 300ms ease;
 
     @include md {
-      color: unset;
-      margin: 0 0.5rem;
       padding: 0 0.75rem;
 
       &.is-active {
@@ -116,6 +120,7 @@
 
     @include md {
       flex-direction: row;
+      color: unset;
     }
   }
 
@@ -161,17 +166,16 @@
           opacity: 0;
           transform: scale(0) rotate(360deg);
           transition: opacity 1s, transform 800ms cubic-bezier(0.26, 2, 0.46, 0.71);
-          color: var(--text-color-white);
           @include md {
             color: unset;
           }
         }
+
         &-moon {
           position: absolute;
           opacity: 1;
           transform: scale(1) rotate(0deg);
           transition: opacity 1s, transform 800ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
-          color: var(--text-color-white);
           @include md {
             color: unset;
           }
@@ -191,7 +195,6 @@
 
     &-menu {
       cursor: pointer;
-      color: var(--text-color-white);
       display: flex;
       align-items: center;
       @include elem-hover;
