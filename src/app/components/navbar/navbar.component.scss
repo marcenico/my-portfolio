@@ -21,6 +21,7 @@
   align-items: center;
   height: var(--header-height);
   padding: 0 1.5rem;
+  @include user-select-none;
 
   &--bg-color {
     background-color: var(--first-color);
@@ -50,9 +51,6 @@
     -moz-box-shadow: -1px -1px 5px -1px #000000bf;
     box-shadow: -1px -1px 5px -1px #000000bf;
     transform: translateY(110%);
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
 
     @include md {
       position: relative;
