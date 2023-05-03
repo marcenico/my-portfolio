@@ -25,6 +25,32 @@
 
   &--center {
     text-align: center;
+
+    @include md {
+      &\@md {
+        text-align: center;
+      }
+    }
+  }
+
+  &--left {
+    text-align: left;
+
+    @include md {
+      &\@md {
+        text-align: left;
+      }
+    }
+  }
+
+  &--right {
+    text-align: right;
+
+    @include md {
+      &\@md {
+        text-align: right;
+      }
+    }
   }
 
   &--semi-bold {
