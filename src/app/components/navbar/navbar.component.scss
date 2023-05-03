@@ -94,11 +94,13 @@
     flex-direction: column;
     justify-content: center;
     color: var(--text-color-white);
+    border-radius: 1rem;
     transition: background-color 300ms ease;
 
     @include md {
       color: unset;
-      padding: 0 1.25rem;
+      margin: 0 0.5rem;
+      padding: 0 0.75rem;
 
       &.is-active {
         background-color: var(--first-color);
