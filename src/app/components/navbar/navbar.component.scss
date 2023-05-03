@@ -32,8 +32,6 @@
   }
 
   &__logo {
-    color: var(--text-color-white);
-
     @include md {
       color: unset;
     }
