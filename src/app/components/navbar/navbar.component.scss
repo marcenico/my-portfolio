@@ -120,6 +120,7 @@
 
     @include md {
       flex-direction: row;
+      gap: 0.25rem;
       color: unset;
     }
   }
