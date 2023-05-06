@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SkillsComponent } from './components/skills/skills.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     AboutComponent,
     SkillsComponent,
     DropdownComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],

@@ -1,0 +1,31 @@
+@import 'scss/1-tools/mixins.scss';
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - var(--header-height));
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: start;
+    gap: 1rem;
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      place-items: center;
+      gap: 0;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    @include elem-hover;
+  }
+}
