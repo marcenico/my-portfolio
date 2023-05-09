@@ -10,48 +10,26 @@
     navigation="true"
     pagination="true"
   >
-    <!-- Content 1 -->
-    <swiper-slide class="portfolio__content o-grid">
-      <img src="assets/images/desktop-1.jpg" alt="" class="portfolio__img" />
+    <!-- Content -->
+    <swiper-slide class="portfolio__content o-grid" *ngFor="let item of portfolioItems">
+      <img [src]="item.image" [alt]="item.title" class="portfolio__img" />
 
       <div class="portfolio__data">
-        <h4 class="o-text-4 o-mb-0-5">Project title 1</h4>
-        <p class="o-text-4 o-mb-0-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <h4 class="o-text-4 o-mb-0-5">{{ item.title }}</h4>
+        <p class="o-text-4 o-mb-0-5">{{ item.description }}</p>
 
-        <a href="" class="c-button c-button--inline-flex c-button--ai-center">
-          Demo
-          <i class="uil uil-arrow-right c-button__icon"></i>
-        </a>
-      </div>
-    </swiper-slide>
-
-    <!-- Content 2 -->
-    <swiper-slide class="portfolio__content o-grid">
-      <img src="assets/images/desktop-1.jpg" alt="" class="portfolio__img" />
-
-      <div class="portfolio__data">
-        <h4 class="o-text-4 o-mb-0-5">Project title 2</h4>
-        <p class="o-text-4 o-mb-0-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-
-        <a href="" class="c-button c-button--inline-flex c-button--ai-center">
-          Demo
-          <i class="uil uil-arrow-right c-button__icon"></i>
-        </a>
-      </div>
-    </swiper-slide>
-
-    <!-- Content 3 -->
-    <swiper-slide class="portfolio__content o-grid">
-      <img src="assets/images/desktop-1.jpg" alt="" class="portfolio__img" />
-
-      <div class="portfolio__data">
-        <h4 class="o-text-4 o-mb-0-5">Project title 3</h4>
-        <p class="o-text-4 o-mb-0-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-
-        <a href="" class="c-button c-button--inline-flex c-button--ai-center">
-          Demo
-          <i class="uil uil-arrow-right c-button__icon"></i>
-        </a>
+        <div class="portfolio__buttons">
+          <a *ngIf="item.pageLink" [href]="item.pageLink" class="c-button c-button--inline-flex c-button--ai-center">
+            Demo<i class="uil uil-arrow-right c-button__icon"></i>
+          </a>
+          <a
+            *ngIf="item.gitHubLink"
+            [href]="item.gitHubLink"
+            class="c-button c-button--inline-flex c-button--ai-center"
+          >
+            GitHub<i class="uil uil-arrow-right c-button__icon"></i>
+          </a>
+        </div>
       </div>
     </swiper-slide>
   </swiper-container>
