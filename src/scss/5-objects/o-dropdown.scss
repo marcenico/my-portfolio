@@ -2,9 +2,6 @@
   transition: 300ms;
   @include user-select-none;
 
-  @include md {
-  }
-
   &__header {
     display: flex;
     flex-direction: row;
