@@ -1,34 +1,36 @@
-@mixin sm() {
+// Media Query Mixins
+@mixin sm {
   @media (min-width: 501px) {
     @content;
   }
 }
 
-@mixin md() {
+@mixin md {
   @media (min-width: 1101px) {
     @content;
   }
 }
 
-// RANGE
-@mixin only-xs() {
-  @media (min-width: 0px) and (max-width: 500px) {
+// Range Mixins
+@mixin only-xs {
+  @media (max-width: 500px) {
     @content;
   }
 }
 
-@mixin only-sm() {
+@mixin only-sm {
   @media (min-width: 501px) and (max-width: 1100px) {
     @content;
   }
 }
 
-@mixin only-md() {
+@mixin only-md {
   @media (min-width: 1101px) {
     @content;
   }
 }
 
+// Element Hover Mixin
 @mixin elem-hover {
   transition: all 200ms ease-in;
   &:hover {
@@ -36,8 +38,10 @@
   }
 }
 
+// User Select None Mixin
 @mixin user-select-none {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
