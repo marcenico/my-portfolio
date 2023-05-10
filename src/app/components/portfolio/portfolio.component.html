@@ -1,7 +1,7 @@
 <section class="portfolio o-mb-2-5">
-  <h2 class="o-text-2 o-mb-0-5 o-text--center">Portfolio</h2>
+  <h2 class="o-text o-text--h2 o-mb-0-5 o-text--center">Portfolio</h2>
 
-  <p class="o-text-4 o-text--center o-mb-2">Recent work</p>
+  <p class="o-text o-text--lg o-text--center o-mb-2">Recent work</p>
 
   <swiper-container
     class="s-swiper-container portfolio__container"
@@ -15,8 +15,8 @@
       <img [src]="item.image" [alt]="item.title" class="portfolio__img" />
 
       <div class="portfolio__data">
-        <h4 class="o-text-4 o-mb-0-5">{{ item.title }}</h4>
-        <p class="o-text-4 o-mb-0-5">{{ item.description }}</p>
+        <h4 class="o-text o-text--lg o-mb-0-5">{{ item.title }}</h4>
+        <p class="o-text o-text--lg o-mb-0-5">{{ item.description }}</p>
 
         <div class="portfolio__buttons">
           <a *ngIf="item.pageLink" [href]="item.pageLink" class="c-button c-button--inline-flex c-button--ai-center">

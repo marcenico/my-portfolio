@@ -1,54 +1,27 @@
+$font-sizes: (
+  h1: var(--h1-font-size),
+  h2: var(--h2-font-size),
+  h3: var(--h3-font-size),
+  lg: var(--normal-font-size),
+  sm: var(--small-font-size),
+  xs: var(--smaller-font-size)
+);
+
 .o-text {
-  &-1 {
-    font-size: var(--h1-font-size);
-  }
-
-  &-2 {
-    font-size: var(--h2-font-size);
-  }
-
-  &-3 {
-    font-size: var(--h3-font-size);
-  }
-
-  &-4 {
-    font-size: var(--normal-font-size);
-  }
-
-  &-5 {
-    font-size: var(--small-font-size);
-  }
-
-  &-6 {
-    font-size: var(--smaller-font-size);
-  }
-
-  &--center {
-    text-align: center;
-
-    @include md {
-      &\@md {
-        text-align: center;
-      }
+  @each $size, $value in $font-sizes {
+    &--#{$size} {
+      font-size: $value;
     }
   }
 
-  &--left {
-    text-align: left;
+  @each $alignment in center, left, right {
+    &--#{$alignment} {
+      text-align: #{$alignment};
 
-    @include md {
-      &\@md {
-        text-align: left;
-      }
-    }
-  }
-
-  &--right {
-    text-align: right;
-
-    @include md {
-      &\@md {
-        text-align: right;
+      @include md {
+        &\@md {
+          text-align: #{$alignment};
+        }
       }
     }
   }
