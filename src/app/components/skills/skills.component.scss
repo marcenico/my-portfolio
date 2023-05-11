@@ -6,13 +6,13 @@
   justify-content: center;
   height: calc(100vh - var(--header-height));
 
-  &__container {
+  &__list {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 
     @include md {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 2rem;
     }
   }
