@@ -6,46 +6,49 @@
   justify-content: center;
   height: calc(100vh - var(--header-height));
 
-  &__container {
+  &__swiper {
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-bottom: 1.5rem;
-  }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0.5rem;
-    @include md {
-      flex-direction: row;
+    &-slide {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0.5rem;
+      gap: 1.5rem;
+
+      @include md {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    &-img {
+      align-self: center;
+      width: 85%;
+      max-width: 256px;
+      border-radius: 0.5rem;
+
+      @include md {
+        width: 100%;
+      }
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
+
+      @include md {
+        max-width: 384px;
+      }
     }
-  }
 
-  &__data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @include md {
-      max-width: 384px;
-    }
-  }
-
-  &__buttons {
-    display: flex;
-    justify-content: end;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  &__img {
-    align-self: center;
-    width: 85%;
-    max-width: 256px;
-    border-radius: 0.5rem;
-
-    @include md {
+    &-buttons {
+      display: flex;
+      justify-content: end;
+      gap: 1rem;
       width: 100%;
     }
   }
