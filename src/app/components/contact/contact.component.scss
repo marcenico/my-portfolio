@@ -8,24 +8,24 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     place-items: start;
     gap: 1rem;
 
     @include md {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       place-items: center;
       gap: 0;
     }
-  }
 
-  &__item {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+    &-item {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
 
-    @include elem-hover;
+      @include elem-hover;
+    }
   }
 }
