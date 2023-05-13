@@ -43,12 +43,16 @@
     bottom: 0;
     z-index: var(--z-fixed);
     width: 100%;
-    padding: 2.5rem 0.5rem;
+    padding: 1.5rem 0.5rem;
     border-radius: 0.75rem 0.75rem 0 0;
     -webkit-box-shadow: -1px -1px 5px -1px #000000bf;
     -moz-box-shadow: -1px -1px 5px -1px #000000bf;
     box-shadow: -1px -1px 5px -1px #000000bf;
     transform: translateY(110%);
+
+    @include only-xs {
+      padding: 1rem 0.5rem;
+    }
 
     @include md {
       position: relative;
@@ -82,10 +86,13 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 2.5rem;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 0.3fr);
+    gap: 1rem 0.5rem;
+
+    @include only-xs {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     @include md {
       grid-template-columns: repeat(5, 1fr);
@@ -131,7 +138,7 @@
     cursor: pointer;
     position: absolute;
     right: 1.5rem;
-    bottom: 1.5rem;
+    bottom: 1rem;
     color: var(--text-color-white);
     @include elem-hover;
 
