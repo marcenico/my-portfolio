@@ -9,7 +9,8 @@
   @include md {
     display: grid;
     place-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    gap: 2rem;
   }
 
   &__avatar-social-media-links {
