@@ -1,6 +1,10 @@
 :root {
   --header-height: 3.5rem;
 
+  @include md {
+    --header-height: 4rem;
+  }
+
   /* Colors */
   /*#region Change favorite color */
   --hue: 270;
@@ -17,9 +21,10 @@
   --text-color-white: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
   --text-color-light: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 10%));
   --input-color: hsl(var(--hue), 70%, 96%);
-  --body-color: hsl(var(--hue), 70%, 100%);
+  --body-color: hsl(var(--hue), var(--saturation), 98%);
   --container-color: #fff;
   --shadow-color: hsl(0, 0%, 65%);
+  --footer-color: hsl(var(--hue), 70%, 95%);
   /*#endregion Change favorite color */
 
   /*#region Font and typography */
@@ -97,9 +102,10 @@
   --text-color-light: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 20%));
   --text-color-white: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) + 45%));
   --input-color: hsl(var(--hue), 70%, 96%);
-  --body-color: hsl(var(--hue), calc(var(--saturation) * 0), calc(var(--lightness) * 0.25));
+  --body-color: hsl(var(--hue), calc(var(--saturation) * 0.15), calc(var(--lightness) * 0.25));
   --container-color: #fff;
   --shadow-color: hsl(0, 0%, 20%);
+  --footer-color: hsl(var(--hue), calc(var(--saturation) * 0.15), calc(var(--lightness) * 0.35));
 
   /*#region Others */
   /*==========  ==========*/
