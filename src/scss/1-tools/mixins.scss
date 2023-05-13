@@ -51,3 +51,10 @@
   -moz-box-shadow: $shadow;
   box-shadow: $shadow;
 }
+
+@mixin section-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10rem;
+}

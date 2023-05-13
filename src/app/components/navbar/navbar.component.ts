@@ -35,6 +35,7 @@ export class NavbarComponent implements OnInit {
 
   goTo(sectionId: string) {
     this.activeSection = sectionId;
+    this.scroller.setOffset([0, 70]);
     this.scroller.scrollToAnchor(sectionId);
   }
 
