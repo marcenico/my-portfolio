@@ -12,6 +12,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './components/contact/contact.component';
     SkillsComponent,
     DropdownComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    ScrollToTopComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],
