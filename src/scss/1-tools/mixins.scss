@@ -32,8 +32,18 @@
 
 // Element Hover Mixin
 @mixin elem-hover {
-  transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
   &:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
   }
 }
