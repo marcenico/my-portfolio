@@ -29,7 +29,7 @@ $shadow-value: 1px 1px 3px 1px var(--shadow-color);
   }
 
   &__icon {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   &__scroll-to-top {
@@ -51,9 +51,6 @@ $shadow-value: 1px 1px 3px 1px var(--shadow-color);
     }
   }
 
-  &__next-section {
-  }
-
   &--inline-flex {
     display: inline-flex;
   }
@@ -68,7 +65,7 @@ $shadow-value: 1px 1px 3px 1px var(--shadow-color);
     place-items: center;
     border-radius: 50%;
     padding: 0;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
