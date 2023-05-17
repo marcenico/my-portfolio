@@ -13,6 +13,7 @@ import { DropdownComponent } from './shared/dropdown/dropdown.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { ButtonNextComponent } from './components/button-next/button-next.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     DropdownComponent,
     PortfolioComponent,
     ContactComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    ButtonNextComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
   providers: [],

@@ -3,7 +3,13 @@
 
   <p class="o-text o-text--md o-text--center o-mb-2">Recent work</p>
 
-  <swiper-container class="portfolio__swiper" slides-per-view="1" speed="500" navigation="true" pagination="true">
+  <swiper-container
+    class="portfolio__swiper o-mb-2-5"
+    slides-per-view="1"
+    speed="500"
+    navigation="true"
+    pagination="true"
+  >
     <swiper-slide class="portfolio__swiper-slide" *ngFor="let item of portfolioItems">
       <img [src]="item.image" [alt]="item.title" class="portfolio__swiper-img" />
 
@@ -26,4 +32,6 @@
       </div>
     </swiper-slide>
   </swiper-container>
+
+  <app-button-next sectionId="contactme"></app-button-next>
 </section>
