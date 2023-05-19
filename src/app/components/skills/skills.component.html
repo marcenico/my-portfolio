@@ -1,26 +1,29 @@
 <section class="skills">
   <h2 class="o-text o-text--h2 o-mb-0-5 o-text--center">Skills</h2>
 
-  <p class="o-text o-text--md o-text--center o-mb-2">My technical level</p>
+  <p class="o-text o-text--md o-text--center o-mb-2">
+    This section highlights my diverse skill set. With a combination of technical proficiency, creativity, and
+    adaptability, I am equipped to tackle challenges and achieve exceptional results.
+  </p>
 
   <!-- Skills List -->
-  <div class="skills__list o-mb-2-5">
-    <!-- Frontend Skills -->
-    <app-dropdown
-      title="Frontend developer"
-      subtitle="More than 5 years"
-      icon="uil-brackets-curly"
-      [dropdownItems]="skillsFrontend"
-    ></app-dropdown>
-
-    <!-- Backend Skills -->
-    <app-dropdown
-      title="Backend developer"
-      subtitle="More than 2 years"
-      icon="uil-server-network"
-      [dropdownItems]="skillsBackend"
-    ></app-dropdown>
-  </div>
+  <ul class="skills__list o-mb-2-5">
+    <li>
+      <img class="skills__technology-icon" src="assets/images/html-icon.svg" alt="HTML" />
+    </li>
+    <li>
+      <img class="skills__technology-icon" src="assets/images/css-icon.svg" alt="CSS" />
+    </li>
+    <li>
+      <img class="skills__technology-icon" src="assets/images/js-icon.svg" alt="JavaScript" />
+    </li>
+    <li>
+      <img class="skills__technology-icon" src="assets/images/nodejs-icon.svg" alt="NodeJS" />
+    </li>
+    <li>
+      <img class="skills__technology-icon" src="assets/images/angular-icon.svg" alt="Angular" />
+    </li>
+  </ul>
 
   <app-button-next sectionId="portfolio"></app-button-next>
 </section>
