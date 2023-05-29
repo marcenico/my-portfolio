@@ -45,6 +45,10 @@
       @include md {
         max-width: 480px;
       }
+
+      &-link {
+        color: var(--first-color);
+      }
     }
 
     &-buttons {
