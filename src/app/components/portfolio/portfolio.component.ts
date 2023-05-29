@@ -12,26 +12,27 @@ export class PortfolioComponent implements OnInit {
   constructor() {
     this.portfolioItems = [
       {
-        image: 'assets/images/desktop-1.jpg',
-        title: 'Project 1',
-        description: 'Project 1 description',
-        pageLink: undefined,
-        gitHubLink: undefined
-      },
-      {
-        image: 'assets/images/desktop-1.jpg',
-        title: 'Project 2',
-        description: 'Project 2 description',
-        pageLink: 'undefined',
-        gitHubLink: 'undefined'
-      },
-      {
-        image: 'assets/images/desktop-1.jpg',
-        title: 'Project 3',
-        description: 'Project 3 description',
+        image: 'assets/gifs/project-world-cup.gif',
+        title: 'Project for LatinAd',
+        description:
+          'This system was designed to be displayed on various public screens, ensuring that viewers in public places could easily access up-to-date and relevant details about the tournament.',
         pageLink: undefined,
         gitHubLink: undefined
       }
+      // {
+      //   image: 'assets/images/desktop-1.jpg',
+      //   title: 'Project 2',
+      //   description: 'Project 2 description',
+      //   pageLink: 'undefined',
+      //   gitHubLink: 'undefined'
+      // },
+      // {
+      //   image: 'assets/images/desktop-1.jpg',
+      //   title: 'Project 3',
+      //   description: 'Project 3 description',
+      //   pageLink: undefined,
+      //   gitHubLink: undefined
+      // }
     ];
   }
 
