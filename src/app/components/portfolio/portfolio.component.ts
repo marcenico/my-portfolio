@@ -16,7 +16,7 @@ export class PortfolioComponent implements OnInit {
       {
         image: 'assets/gifs/project-world-cup.gif',
         title:
-          'Project for <a class="o-text--h4 portfolio__swiper-data-link" href="https://latinad.com/" target="_blank">LatinAd</a>',
+          'Project for <a class="o-text--h4 o-text--first-color" href="https://latinad.com/" target="_blank">LatinAd</a>',
         description:
           'This system was designed to be displayed on various public screens, ensuring that viewers in public places could easily access up-to-date and relevant details about the tournament.',
         pageLink: undefined,
