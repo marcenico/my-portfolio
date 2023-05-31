@@ -32,6 +32,8 @@
   }
 
   &__logo {
+    cursor: pointer;
+
     @include md {
       color: unset;
     }
