@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DropdownItem } from 'src/app/models/dropdown-item.model';
 import { fadeAnimation } from 'src/app/shared/animations/animations';
 
 @Component({
@@ -9,15 +8,13 @@ import { fadeAnimation } from 'src/app/shared/animations/animations';
   animations: fadeAnimation
 })
 export class SkillsComponent implements OnInit {
-  skillsFrontend: DropdownItem[] = [];
-  skillsBackend: DropdownItem[] = [];
   isVisible = false;
+  skills: any[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-    this.setFrontendSkills();
-    this.setBackendSkills();
+    this.setSkills();
   }
   ngAfterViewInit(): void {
     const targetElement = document.getElementById('skills');
@@ -32,17 +29,14 @@ export class SkillsComponent implements OnInit {
     observer.observe(targetElement);
   }
 
-  private setFrontendSkills() {
-    this.skillsFrontend.push({ name: 'HTML', percent: 90 });
-    this.skillsFrontend.push({ name: 'Css', percent: 95 });
-    this.skillsFrontend.push({ name: 'JavaScript', percent: 85 });
-    this.skillsFrontend.push({ name: 'Angular', percent: 95 });
-  }
-
-  private setBackendSkills() {
-    this.skillsBackend.push({ name: 'Node.js', percent: 80 });
-    this.skillsBackend.push({ name: 'Java', percent: 70 });
-    this.skillsBackend.push({ name: 'Firebase', percent: 80 });
-    this.skillsBackend.push({ name: 'MySQL', percent: 75 });
+  private setSkills() {
+    this.skills.push({ name: 'HTML', icon: 'assets/images/html-icon.svg' });
+    this.skills.push({ name: 'CSS', icon: 'assets/images/css-icon.svg' });
+    this.skills.push({ name: 'Bootstrap', icon: 'assets/images/bootstrap-icon.svg' });
+    this.skills.push({ name: 'JavaScript', icon: 'assets/images/js-icon.svg' });
+    this.skills.push({ name: 'NodeJs', icon: 'assets/images/nodejs-icon.svg' });
+    this.skills.push({ name: 'Angular', icon: 'assets/images/angular-icon.svg' });
+    this.skills.push({ name: 'Git', icon: 'assets/images/git-icon.svg' });
+    this.skills.push({ name: 'GitHub', icon: 'assets/images/github-icon.svg' });
   }
 }

@@ -35,11 +35,10 @@
   &__icon {
     margin: auto;
     width: 2rem;
-    height: 2rem;
+    height: auto;
 
     @include md {
       width: 3rem;
-      height: 3rem;
     }
   }
 }

@@ -8,20 +8,8 @@
 
   <!-- Skills List -->
   <ul class="skills__list o-mb-2-5">
-    <li class="skills__list-item">
-      <img class="skills__icon" src="assets/images/html-icon.svg" alt="HTML" />
-    </li>
-    <li class="skills__list-item">
-      <img class="skills__icon" src="assets/images/css-icon.svg" alt="CSS" />
-    </li>
-    <li class="skills__list-item">
-      <img class="skills__icon" src="assets/images/js-icon.svg" alt="JavaScript" />
-    </li>
-    <li class="skills__list-item">
-      <img class="skills__icon" src="assets/images/nodejs-icon.svg" alt="NodeJS" />
-    </li>
-    <li class="skills__list-item">
-      <img class="skills__icon" src="assets/images/angular-icon.svg" alt="Angular" />
+    <li class="skills__list-item" *ngFor="let skill of skills">
+      <img class="skills__icon" [src]="skill.icon" [alt]="skill.name" />
     </li>
   </ul>
 
