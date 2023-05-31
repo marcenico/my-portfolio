@@ -63,8 +63,10 @@
 }
 
 @mixin section-page {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-block: 9rem;
+  padding-block: 5rem;
 }

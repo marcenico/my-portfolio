@@ -1,12 +1,14 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { fadeAnimation } from 'src/app/shared/animations/animations';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  animations: fadeAnimation
 })
 export class PortfolioComponent implements OnInit {
+  isVisible = false;
   portfolioItems: any[];
 
   constructor() {
@@ -20,22 +22,21 @@ export class PortfolioComponent implements OnInit {
         pageLink: undefined,
         gitHubLink: undefined
       }
-      // {
-      //   image: 'assets/images/desktop-1.jpg',
-      //   title: 'Project 2',
-      //   description: 'Project 2 description',
-      //   pageLink: 'undefined',
-      //   gitHubLink: 'undefined'
-      // },
-      // {
-      //   image: 'assets/images/desktop-1.jpg',
-      //   title: 'Project 3',
-      //   description: 'Project 3 description',
-      //   pageLink: undefined,
-      //   gitHubLink: undefined
-      // }
     ];
   }
 
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    const targetElement = document.getElementById('portfolio');
+    if (!targetElement) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        this.isVisible = entry.isIntersecting ? true : false;
+      });
+    });
+
+    observer.observe(targetElement);
+  }
 }
