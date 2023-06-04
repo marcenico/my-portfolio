@@ -32,6 +32,7 @@ export class SkillsComponent implements OnInit {
   private setSkills() {
     this.skills.push({ name: 'HTML', icon: 'assets/images/html-icon.svg' });
     this.skills.push({ name: 'CSS', icon: 'assets/images/css-icon.svg' });
+    this.skills.push({ name: 'SASS', icon: 'assets/images/sass-icon.svg' });
     this.skills.push({ name: 'Bootstrap', icon: 'assets/images/bootstrap-icon.svg' });
     this.skills.push({ name: 'JavaScript', icon: 'assets/images/js-icon.svg' });
     this.skills.push({ name: 'NodeJs', icon: 'assets/images/nodejs-icon.svg' });
