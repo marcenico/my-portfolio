@@ -17,7 +17,7 @@
 
       <div class="portfolio__swiper-data">
         <h4 class="o-text o-text--md o-mb-0-5" [innerHTML]="item.title"></h4>
-        <p class="o-text o-text--md o-mb-0-5">{{ item.description }}</p>
+        <p class="o-text o-text--md o-mb-0-5" [innerHTML]="item.description"></p>
 
         <div class="portfolio__swiper-buttons" *ngIf="item.pageLink || item.gitHubLink">
           <a *ngIf="item.pageLink" [href]="item.pageLink" class="c-button c-button--inline-flex c-button--ai-center">
