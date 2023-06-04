@@ -11,6 +11,8 @@
     gap: 1.5rem;
 
     @include md {
+      width: 60%;
+      margin-inline: auto;
       grid-template-columns: repeat(auto-fit, 5rem);
       gap: 2rem;
     }
