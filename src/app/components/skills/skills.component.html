@@ -8,7 +8,7 @@
 
   <!-- Skills List -->
   <ul class="skills__list o-mb-2-5">
-    <li class="skills__list-item" *ngFor="let skill of skills">
+    <li [title]="skill.name" class="skills__list-item" *ngFor="let skill of skills">
       <img class="skills__icon" [src]="skill.icon" [alt]="skill.name" />
     </li>
   </ul>
