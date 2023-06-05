@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.onResize(window.innerWidth);
+    this.scroller.setOffset([0, 64]);
     this.scroller.scrollToAnchor(HOME_SECTION_ID);
   }
 
@@ -35,6 +36,7 @@ export class NavbarComponent implements OnInit {
 
   goTo(sectionId: string) {
     this.activeSection = sectionId;
+    this.scroller.setOffset([0, 64]);
     this.scroller.scrollToAnchor(sectionId);
   }
 

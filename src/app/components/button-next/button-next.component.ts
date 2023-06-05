@@ -14,7 +14,7 @@ export class ButtonNextComponent implements OnInit {
   ngOnInit(): void {}
 
   goToNextSection() {
-    this.scroller.setOffset([0, 120]);
+    this.scroller.setOffset([0, 64]);
     this.scroller.scrollToAnchor(this.nextSectionId);
   }
 }
