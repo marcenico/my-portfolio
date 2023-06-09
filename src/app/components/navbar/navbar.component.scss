@@ -173,10 +173,6 @@
         height: var(--h3-font-size);
         width: var(--h3-font-size);
 
-        @include md {
-          @include elem-hover;
-        }
-
         &--en {
           position: absolute;
           height: var(--h3-font-size);
