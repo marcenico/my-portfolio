@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact me"
+  },
+
+  "home": {
+    "title": "Hi, I'm",
+    "name": "Marce",
+    "subtitle": "Front developer"
+  },
+
+  "about": {
+    "title": "About Me",
+    "description": "5+ years experience in web development, using my knowledge for the production of quality works.",
+    "years": "Years",
+    "experience": "experience",
+    "companies": "Companies",
+    "worked": "worked"
+  },
+
+  "skills": {
+    "title": "Skills",
+    "description": "This section highlights my diverse skill set. With a combination of technical proficiency, creativity, and adaptability, I am equipped to tackle challenges and achieve exceptional results."
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Bringing visions to reality. Here, I present a compilation of my most noteworthy projects.",
+    "items": [
+      {
+        "title": "Project for&nbsp;",
+        "description": "This system was designed to be displayed on various public screens, ensuring that viewers in public places could easily access up-to-date and relevant details about FIFA World Cup.<br><br>Developed with Angular."
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contact Me",
+    "description": "I'm always happy to meet new people in the industry! Send me a message or reach out to me on LinkedIn to say hello and introduce yourself."
+  },
+
+  "footer": {
+    "copyright-1": "Made with",
+    "copyright-2": "by marcenico"
+  }
+}

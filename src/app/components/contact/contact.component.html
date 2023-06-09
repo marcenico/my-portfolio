@@ -1,10 +1,7 @@
 <section class="contact" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <h1 class="o-text o-text--h2 o-text--center o-mb-0-5">Contact me</h1>
+  <h1 class="o-text o-text--h2 o-text--center o-mb-0-5">{{ 'contact.title' | translate }}</h1>
 
-  <p class="o-text o-text--md o-text--center o-mb-2">
-    I'm always happy to meet new people in the industry! Send me a message or reach out to me on LinkedIn to say hello
-    and introduce yourself
-  </p>
+  <p class="o-text o-text--md o-text--center o-mb-2">{{ 'contact.description' | translate }}</p>
 
   <div class="contact__list">
     <a class="contact__list-item" href="mailto:contacto@marcenico.com">

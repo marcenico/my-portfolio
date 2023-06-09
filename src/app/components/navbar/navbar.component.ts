@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { ThemeService } from 'src/app/services/theme.service';
 
 const HOME_SECTION_ID = 'home';
@@ -18,12 +19,23 @@ export class NavbarComponent implements OnInit {
   hideOpenCloseMenuStates = true;
   activeSection = HOME_SECTION_ID;
 
-  constructor(private scroller: ViewportScroller, private eRef: ElementRef, private themeService: ThemeService) {}
+  constructor(
+    private scroller: ViewportScroller,
+    private eRef: ElementRef,
+    private themeService: ThemeService,
+    private translateService: TranslateService
+  ) {}
 
   ngOnInit(): void {
     this.onResize(window.innerWidth);
     this.scroller.setOffset([0, 64]);
     this.scroller.scrollToAnchor(HOME_SECTION_ID);
+  }
+
+  toggleLang() {
+    const currentLang = localStorage.getItem('lang');
+    localStorage.setItem('lang', currentLang === 'en' ? 'es' : 'en');
+    this.translateService.use(this.getLang());
   }
 
   toggleTheme() {
@@ -40,6 +52,15 @@ export class NavbarComponent implements OnInit {
     this.scroller.scrollToAnchor(sectionId);
   }
 
+  getLang(): string {
+    const lang = localStorage.getItem('lang');
+    return lang === 'en' ? 'es' : 'en';
+  }
+
+  getTheme() {
+    return this.themeService.getTheme();
+  }
+
   @HostListener('document:click', ['$event'])
   clickout(event: any) {
     if (!this.eRef.nativeElement.contains(event.target)) {
@@ -49,10 +70,6 @@ export class NavbarComponent implements OnInit {
     }
 
     this.isClickInside = true;
-  }
-
-  getTheme() {
-    return this.themeService.getTheme();
   }
 
   onResize(width: number) {

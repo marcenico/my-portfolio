@@ -56,9 +56,11 @@
 
   <div class="home__box-presentation o-mb-2-5">
     <h1 class="o-text o-text--h1 o-text--shadow o-text--center o-mb-0-5">
-      Hi, I'm <span class="o-text o-text--h1 o-text--first-color">Marce</span>
+      {{ 'home.title' | translate }}&nbsp;<span class="o-text o-text--h1 o-text--first-color">{{
+        'home.name' | translate
+      }}</span>
     </h1>
-    <h2 class="o-text o-text--h2 o-text--semi-bold o-text--center">Front developer</h2>
+    <h2 class="o-text o-text--h2 o-text--semi-bold o-text--center">{{ 'home.subtitle' | translate }}</h2>
   </div>
 
   <app-button-next class="home__button-next" sectionId="about"></app-button-next>

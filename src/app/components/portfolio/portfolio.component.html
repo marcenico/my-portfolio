@@ -1,8 +1,8 @@
 <section class="portfolio" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <h2 class="o-text o-text--h2 o-mb-0-5 o-text--center">Portfolio</h2>
+  <h2 class="o-text o-text--h2 o-mb-0-5 o-text--center">{{ 'portfolio.title' | translate }}</h2>
 
   <p class="o-text o-text--md o-text--center o-mb-2">
-    Bringing visions to reality. Here, I present a compilation of my most noteworthy projects.
+    {{ 'portfolio.description' | translate }}
   </p>
 
   <swiper-container

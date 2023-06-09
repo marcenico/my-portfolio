@@ -153,8 +153,10 @@
   &__buttons {
     display: flex;
     flex-direction: row;
+    place-items: center;
+    gap: 1rem;
 
-    &-theme {
+    &-switch {
       &-checkbox {
         position: absolute;
         opacity: 0;
@@ -168,14 +170,36 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 2rem;
-        width: 2rem;
+        height: var(--h3-font-size);
+        width: var(--h3-font-size);
 
         @include md {
           @include elem-hover;
         }
 
-        &-sun {
+        &--en {
+          position: absolute;
+          height: var(--h3-font-size);
+          width: var(--h3-font-size);
+          opacity: 0;
+          transition: opacity 600ms, transform 300ms cubic-bezier(0.26, 2, 0.46, 0.71);
+          @include md {
+            color: unset;
+          }
+        }
+
+        &--es {
+          position: absolute;
+          height: var(--h3-font-size);
+          width: var(--h3-font-size);
+          opacity: 1;
+          transition: opacity 600ms, transform 300ms cubic-bezier(0.26, 2.5, 0.46, 0.71);
+          @include md {
+            color: unset;
+          }
+        }
+
+        &--sun {
           position: absolute;
           opacity: 0;
           transform: scale(0) rotate(360deg);
@@ -185,7 +209,7 @@
           }
         }
 
-        &-moon {
+        &--moon {
           position: absolute;
           opacity: 1;
           transform: scale(1) rotate(0deg);
@@ -196,12 +220,20 @@
         }
       }
 
-      &-checkbox:checked ~ &-wrapper .nav__buttons-theme-wrapper-sun {
+      &-checkbox:checked ~ &-wrapper .nav__buttons-switch-wrapper--en {
+        opacity: 1;
+      }
+
+      &-checkbox:checked ~ &-wrapper .nav__buttons-switch-wrapper--es {
+        opacity: 0;
+      }
+
+      &-checkbox:checked ~ &-wrapper .nav__buttons-switch-wrapper--sun {
         opacity: 1;
         transform: scale(1) rotate(0deg);
       }
 
-      &-checkbox:checked ~ &-wrapper .nav__buttons-theme-wrapper-moon {
+      &-checkbox:checked ~ &-wrapper .nav__buttons-switch-wrapper--moon {
         opacity: 0;
         transform: scale(0) rotate(45deg);
       }
@@ -212,10 +244,6 @@
       display: flex;
       align-items: center;
       @include elem-hover;
-
-      &--ml {
-        margin-left: 1rem;
-      }
 
       @include md {
         color: unset;

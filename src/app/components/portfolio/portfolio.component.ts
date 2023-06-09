@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fadeAnimation } from 'src/app/shared/animations/animations';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,19 +10,20 @@ import { fadeAnimation } from 'src/app/shared/animations/animations';
 })
 export class PortfolioComponent implements OnInit {
   isVisible = false;
-  portfolioItems: any[];
+  portfolioItems: any[] = [];
 
-  constructor() {
-    this.portfolioItems = [
-      {
-        image: 'assets/gifs/project-world-cup.gif',
-        title:
-          'Project for <a class="o-text--h4 o-text--first-color" href="https://latinad.com/" target="_blank">LatinAd</a>',
-        description: `This system was designed to be displayed on various public screens, ensuring that viewers in public places could easily access up-to-date and relevant details about the tournament.<br><br>Developed with Angular.`,
-        pageLink: undefined,
-        gitHubLink: undefined
-      }
-    ];
+  constructor(private translateService: TranslateService) {
+    this.translateService.get('portfolio').subscribe((res: any) => {
+      this.portfolioItems = [
+        {
+          image: 'assets/gifs/project-world-cup.gif',
+          title: `${res.items[0].title}<a class="o-text--h4 o-text--first-color" href="https://latinad.com/" target="_blank">LatinAd</a>`,
+          description: `${res.items[0].description}`,
+          pageLink: undefined,
+          gitHubLink: undefined
+        }
+      ];
+    });
   }
 
   ngOnInit(): void {}

@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "portfolio": "Portafolio",
+    "contact": "Contáctame"
+  },
+
+  "home": {
+    "title": "Hola, soy",
+    "name": "Marce",
+    "subtitle": "Desarrollador Front-end"
+  },
+
+  "about": {
+    "title": "Acerca de mí",
+    "description": "Más de 5 años de experiencia en desarrollo web, utilizando mis conocimientos para la producción de trabajos de calidad.",
+    "years": "Años",
+    "experience": "experiencia",
+    "companies": "Empresas",
+    "worked": "trabajadas"
+  },
+
+  "skills": {
+    "title": "Habilidades",
+    "description": "Esta sección destaca mi diverso conjunto de habilidades. Con una combinación de competencia técnica, creatividad y adaptabilidad, estoy preparado para enfrentar desafíos y lograr resultados excepcionales."
+  },
+
+  "portfolio": {
+    "title": "Portafolio",
+    "description": "Convirtiendo visiones en realidad. Aquí presento una compilación de mis proyectos más destacados.",
+    "items": [
+      {
+        "title": "Proyecto para&nbsp;",
+        "description": "Este sistema fue diseñado para mostrarse en varias pantallas de la vía pública, asegurando que las personas puedan ver fácilmente detalles actualizados y relevantes sobre el torneo mundial de la FIFA.<br><br>Desarrollado con Angular."
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Contáctame",
+    "description": "¡Siempre estoy feliz de conocer gente nueva en la industria! Envíame un mensaje o contáctame en LinkedIn para saludar y presentarte."
+  },
+
+  "footer": {
+    "copyright-1": "Hecho con",
+    "copyright-2": "por marcenico"
+  }
+}
