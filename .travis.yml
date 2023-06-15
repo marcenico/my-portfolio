@@ -1,0 +1,29 @@
+language: node_js
+node_js:
+  - 14
+
+branches:
+  only:
+    - main
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm install -g @angular/cli
+
+install:
+  - npm ci
+
+script:
+  - ng build --prod
+  - ng test --watch=false
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/my-portfolio
+  on:
+    branch: master
