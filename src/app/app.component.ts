@@ -9,6 +9,7 @@ import { register } from 'swiper/element/bundle';
 export class AppComponent {
   constructor() {
     this.detectColorScheme();
+    this.initLanguange();
     register();
   }
 
@@ -28,6 +29,12 @@ export class AppComponent {
 
     if (theme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  }
+
+  initLanguange() {
+    if (!localStorage.getItem('lang')) {
+      localStorage.setItem('lang', 'en');
     }
   }
 }

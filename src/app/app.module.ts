@@ -45,7 +45,7 @@ const lang = localStorage.getItem('lang');
     BrowserModule,
     HttpClientModule,
     TranslateModule.forRoot({
-      defaultLanguage: lang === 'en' ? 'es' : 'en',
+      defaultLanguage: !lang ? 'en' : lang === 'en' ? 'en' : 'es',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,

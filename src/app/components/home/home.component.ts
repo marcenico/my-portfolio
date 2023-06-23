@@ -26,4 +26,10 @@ export class HomeComponent implements OnInit {
 
     observer.observe(targetElement);
   }
+
+  downloadCV() {
+    const fileUrl = localStorage.getItem('lang') === 'en' ? 'assets/files/cv-en.pdf' : 'assets/files/cv-es.pdf';
+
+    window.open(fileUrl, '_blank');
+  }
 }

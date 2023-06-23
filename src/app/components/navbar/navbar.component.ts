@@ -54,7 +54,7 @@ export class NavbarComponent implements OnInit {
 
   getLang(): string {
     const lang = localStorage.getItem('lang');
-    return lang === 'en' ? 'es' : 'en';
+    return !lang ? 'en' : lang === 'en' ? 'en' : 'es';
   }
 
   getTheme() {
