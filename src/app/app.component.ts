@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { register } from 'swiper/element/bundle';
 
 @Component({
@@ -6,11 +7,23 @@ import { register } from 'swiper/element/bundle';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  constructor() {
+export class AppComponent implements OnInit {
+  constructor(private meta: Meta) {
     this.detectColorScheme();
     this.initLanguange();
     register();
+  }
+
+  ngOnInit(): void {
+    this.meta.addTag({
+      name: 'description',
+      content:
+        'Marcelo Nicolas Puebla is a web developer based in Mendoza, Argentina. Visit my portfolio website to see more of my work.'
+    });
+    this.meta.addTag({
+      name: 'keywords',
+      content: 'web developer, portfolio, angular, javascript, css, html, bootstrap, sass, nodejs, angular, git, github'
+    });
   }
 
   detectColorScheme() {
