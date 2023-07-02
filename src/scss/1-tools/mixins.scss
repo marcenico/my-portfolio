@@ -69,4 +69,8 @@
   flex-direction: column;
   justify-content: center;
   padding-block: 5rem;
+
+  @include only-xs {
+    padding-block: 3rem;
+  }
 }

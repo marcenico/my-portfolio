@@ -1,6 +1,12 @@
+@import 'scss/1-tools/mixins.scss';
+
 .page-sections {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10rem;
+  gap: 6rem;
+
+  @include only-xs {
+    gap: 3rem;
+  }
 }
