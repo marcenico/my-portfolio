@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { fadeAnimation } from 'src/app/shared/animations/animations';
 import { TranslateService } from '@ngx-translate/core';
+import { fadeAnimation } from 'src/app/shared/animations/animations';
 
 @Component({
   selector: 'app-portfolio',
@@ -17,8 +17,8 @@ export class PortfolioComponent implements OnInit {
       this.portfolioItems = [
         {
           image: 'assets/gifs/project-world-cup.gif',
-          title: `${res.items[0].title}<a class="o-text--h4 o-text--first-color" href="https://latinad.com/" target="_blank">LatinAd</a>`,
-          description: `${res.items[0].description}`,
+          title: `${res.items[0]?.title}<a class="o-text--h4 o-text--first-color" href="https://latinad.com/" target="_blank">LatinAd</a>`,
+          description: `${res.items[0]?.description}`,
           pageLink: undefined,
           gitHubLink: undefined
         }

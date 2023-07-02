@@ -6,7 +6,8 @@
   </p>
 
   <swiper-container
-    class="portfolio__swiper o-mb-2-5"
+    class="portfolio__swiper o-mb-1-5"
+    [class.o-pb-2]="portfolioItems.length > 1"
     slides-per-view="1"
     speed="500"
     navigation="true"
