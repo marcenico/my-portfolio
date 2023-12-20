@@ -1,9 +1,7 @@
 <section class="portfolio" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <h2 class="o-text o-text--h2 o-mb-0-5 o-text--center">{{ 'portfolio.title' | translate }}</h2>
+  <app-section-title section="portfolio.title"></app-section-title>
 
-  <p class="o-text o-text--md o-text--center o-mb-2">
-    {{ 'portfolio.description' | translate }}
-  </p>
+  <app-section-description section="portfolio.description"></app-section-description>
 
   <swiper-container
     class="portfolio__swiper o-mb-1-5"

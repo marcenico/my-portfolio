@@ -17,6 +17,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { DropdownComponent } from './shared/dropdown/dropdown.component';
+import { SectionTitleComponent } from './ui/section-title/section-title.component';
+import { SectionDescriptionComponent } from './ui/section-description/section-description.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -37,7 +39,9 @@ const lang = localStorage.getItem('lang');
     PageNotFoundComponent,
     PortfolioComponent,
     ScrollToTopComponent,
-    SkillsComponent
+    SkillsComponent,
+    SectionTitleComponent,
+    SectionDescriptionComponent
   ],
   imports: [
     AppRoutingModule,

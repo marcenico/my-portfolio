@@ -1,9 +1,7 @@
 <section class="about" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <h1 class="o-text o-text--h2 o-text--center o-mb-0-5">{{ 'about.title' | translate }}</h1>
+  <app-section-title section="about.title"></app-section-title>
 
-  <p class="o-text o-text--md o-text--center o-mb-2">
-    {{ 'about.description' | translate }}
-  </p>
+  <app-section-description section="about.description"></app-section-description>
 
   <div class="about__list o-mb-1-5">
     <div class="about__list-item">
@@ -20,13 +18,6 @@
       >
     </div>
   </div>
-
-  <!-- TODO: Para agregar esto primero modificar mi CV -->
-  <!-- <div class="about__button">
-    <a download="" href="assets/pdf/cv.pdf" class="c-button c-button--inline-flex c-button--ai-center"
-      >Descargar CV&nbsp;<i class="uil uil-download-alt"></i
-    ></a>
-  </div> -->
 
   <app-button-next sectionId="skills"></app-button-next>
 </section>

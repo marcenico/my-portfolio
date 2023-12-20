@@ -1,9 +1,7 @@
 <section class="skills" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <h2 class="o-text o-text--h2 o-mb-0-5 o-text--center">{{ 'skills.title' | translate }}</h2>
+  <app-section-title section="skills.title"></app-section-title>
 
-  <p class="o-text o-text--md o-text--center o-mb-2">
-    {{ 'skills.description' | translate }}
-  </p>
+  <app-section-description section="skills.description"></app-section-description>
 
   <!-- Skills List -->
   <ul class="skills__list o-mb-1-5">
