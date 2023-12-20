@@ -16,7 +16,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { DropdownComponent } from './shared/dropdown/dropdown.component';
+import { DropdownComponent } from './ui/dropdown/dropdown.component';
 import { SectionTitleComponent } from './ui/section-title/section-title.component';
 import { SectionDescriptionComponent } from './ui/section-description/section-description.component';
 
