@@ -5,20 +5,17 @@
 
   &__list {
     display: grid;
-    place-items: center;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, 4rem);
+    grid-template-columns: repeat(auto-fit, minmax(4rem, auto));
     gap: 1.5rem;
 
     @include md {
-      width: 60%;
-      margin-inline: auto;
-      grid-template-columns: repeat(auto-fit, 5rem);
+      grid-template-columns: repeat(auto-fit, minmax(5rem, auto));
       gap: 2rem;
     }
 
     &-item {
       display: flex;
+      place-self: center;
       background-color: var(--container-color);
       border-radius: 50%;
       width: 4rem;
