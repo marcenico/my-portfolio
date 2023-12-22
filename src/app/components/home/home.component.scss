@@ -1,50 +1,53 @@
 @import 'scss/1-tools/mixins.scss';
 
 .home {
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: var(--mb-2);
   @include section-page;
 
   @include md {
-    display: grid;
-    place-content: center;
-    place-items: center;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: auto;
-    gap: 1rem;
-
-    &__button-next {
-      grid-area: 2 / 1 / 3 / 3;
-    }
+    flex-direction: row-reverse;
   }
 
-  &__avatar-social-media-links {
+  &__box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: var(--mb-2) 0;
+    flex: 1;
 
-    @include md {
+    &-avatar {
+      gap: var(--mb-1-5);
+      justify-content: center;
+      place-self: center;
+      align-items: center;
+      width: min-content;
+      flex-direction: row-reverse;
+      margin-bottom: var(--mb-2);
+
+      @include md {
+        margin-bottom: 0;
+        flex-direction: column;
+      }
+    }
+
+    &-presentation {
+      justify-content: center;
       flex-direction: column;
-    }
-  }
+      align-items: start;
+      gap: var(--mb-1);
 
-  &__box-presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 1rem;
+      @include md {
+        width: min-content;
+      }
+    }
   }
 
   &__avatar-blob {
     display: flex;
-    margin: 0 2rem 0 0;
-    max-height: 220px;
+    width: 280px;
     fill: var(--first-color);
 
     @include md {
-      margin: 0;
-      width: 100%;
-      max-height: 320px;
+      width: 320px;
     }
 
     &-img {
@@ -61,7 +64,6 @@
     @include md {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 2rem;
-      margin: 3rem 0 0 0;
     }
 
     &-item {
@@ -74,5 +76,9 @@
         color: var(--first-color);
       }
     }
+  }
+
+  &__button-next {
+    flex-basis: 100%;
   }
 }

@@ -1,5 +1,5 @@
 <section class="home" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <div class="home__avatar-social-media-links">
+  <div class="home__box home__box-avatar">
     <!-- PERSONAL INFO -->
     <svg class="home__avatar-blob" viewBox="12 10 166 166" xmlns="http://www.w3.org/2000/svg">
       <mask id="mask0" mask-type="alpha">
@@ -54,9 +54,9 @@
     </ul>
   </div>
 
-  <div class="home__box-presentation o-mb-1-5">
-    <h1 class="o-text o-text--h1 o-text--shadow o-mb-2-5">
-      {{ 'home.title' | translate }}<br />
+  <div class="home__box home__box-presentation o-mb-1-5">
+    <h1 class="o-text o-text--h1 o-text--shadow">
+      {{ 'home.title' | translate }}
       <span class="o-text o-text--h1 o-text--first-color">
         {{ 'home.name' | translate }}
       </span>
@@ -67,5 +67,5 @@
     <a (click)="downloadCV()" class="c-button o-text--center">{{ 'home.downloadCV' | translate }}</a>
   </div>
 
-  <app-button-next class="home__button-next" sectionId="about"></app-button-next>
+  <app-button-next class="home__box home__button-next" sectionId="about"></app-button-next>
 </section>
