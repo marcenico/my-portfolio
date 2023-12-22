@@ -11,6 +11,8 @@ $shadow-value: 1px 1px 3px 1px var(--shadow-color);
   @include box-shadow($shadow-value);
   transition: 450ms ease-in-out;
 
+  @include elem-hover;
+
   &:hover {
     background-color: var(--first-color-alt);
   }
@@ -19,9 +21,6 @@ $shadow-value: 1px 1px 3px 1px var(--shadow-color);
     background-color: transparent;
     box-shadow: unset;
     color: var(--text-color);
-    -webkit-animation: fade-move-down 1.5s ease-in-out infinite;
-    -moz-animation: fade-move-down 1.5s ease-in-out infinite;
-    animation: fade-move-down 1.5s ease-in-out infinite;
 
     &:hover {
       background-color: transparent;

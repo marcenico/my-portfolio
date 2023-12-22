@@ -32,10 +32,10 @@
 
 // Element Hover Mixin
 @mixin elem-hover {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
