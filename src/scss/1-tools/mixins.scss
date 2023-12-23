@@ -64,8 +64,6 @@
 
 @mixin section-page {
   display: flex;
-  opacity: 0;
-  transition: opacity 1000ms ease-in-out;
   flex-direction: column;
   justify-content: center;
   padding-block: 5rem;

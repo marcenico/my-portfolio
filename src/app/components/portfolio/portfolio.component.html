@@ -1,11 +1,11 @@
 <section class="portfolio" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <app-section-title
-    section="portfolio.title"
+  <app-section-title section="portfolio.title"></app-section-title>
+
+  <app-section-description
+    section="portfolio.description"
     appVisibility
     (visibilityChange)="isVisible = $event"
-  ></app-section-title>
-
-  <app-section-description section="portfolio.description"></app-section-description>
+  ></app-section-description>
 
   <swiper-container
     class="portfolio__swiper o-mb-1-5"

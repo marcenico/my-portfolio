@@ -1,7 +1,11 @@
 <section class="skills" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <app-section-title section="skills.title" appVisibility (visibilityChange)="isVisible = $event"></app-section-title>
+  <app-section-title section="skills.title"></app-section-title>
 
-  <app-section-description section="skills.description"></app-section-description>
+  <app-section-description
+    section="skills.description"
+    appVisibility
+    (visibilityChange)="isVisible = $event"
+  ></app-section-description>
 
   <!-- Skills List -->
   <ul class="skills__list o-mb-1-5">

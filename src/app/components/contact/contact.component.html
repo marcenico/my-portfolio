@@ -1,7 +1,11 @@
 <section class="contact" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <app-section-title section="contact.title" appVisibility (visibilityChange)="isVisible = $event"></app-section-title>
+  <app-section-title section="contact.title"></app-section-title>
 
-  <app-section-description section="contact.description"></app-section-description>
+  <app-section-description
+    section="contact.description"
+    appVisibility
+    (visibilityChange)="isVisible = $event"
+  ></app-section-description>
 
   <div class="contact__list">
     <a class="contact__list-item" href="mailto:contacto@marcenico.com">

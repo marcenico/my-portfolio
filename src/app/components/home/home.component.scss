@@ -4,6 +4,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: var(--mb-2);
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+
   @include section-page;
 
   @include md {

@@ -1,7 +1,11 @@
 <section class="about" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <app-section-title section="about.title" appVisibility (visibilityChange)="isVisible = $event"></app-section-title>
+  <app-section-title section="about.title"></app-section-title>
 
-  <app-section-description section="about.description"></app-section-description>
+  <app-section-description
+    section="about.description"
+    appVisibility
+    (visibilityChange)="isVisible = $event"
+  ></app-section-description>
 
   <div class="about__list o-mb-1-5">
     <div class="about__list-item">
