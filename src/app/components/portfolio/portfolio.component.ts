@@ -39,17 +39,4 @@ export class PortfolioComponent implements OnInit {
       ];
     });
   }
-
-  ngAfterViewInit(): void {
-    const targetElement = document.getElementById('portfolio');
-    if (!targetElement) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        this.isVisible = entry.isIntersecting ? true : false;
-      });
-    });
-
-    observer.observe(targetElement);
-  }
 }

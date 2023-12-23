@@ -13,17 +13,4 @@ export class AboutComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  ngAfterViewInit(): void {
-    const targetElement = document.getElementById('about');
-    if (!targetElement) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        this.isVisible = entry.isIntersecting ? true : false;
-      });
-    });
-
-    observer.observe(targetElement);
-  }
 }

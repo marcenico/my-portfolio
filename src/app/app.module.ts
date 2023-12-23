@@ -19,6 +19,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { DropdownComponent } from './ui/dropdown/dropdown.component';
 import { SectionTitleComponent } from './ui/section-title/section-title.component';
 import { SectionDescriptionComponent } from './ui/section-description/section-description.component';
+import { VisibilityDirective } from './directives/visibility.directive';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -41,7 +42,8 @@ const lang = localStorage.getItem('lang');
     ScrollToTopComponent,
     SkillsComponent,
     SectionTitleComponent,
-    SectionDescriptionComponent
+    SectionDescriptionComponent,
+    VisibilityDirective
   ],
   imports: [
     AppRoutingModule,

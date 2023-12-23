@@ -1,5 +1,5 @@
 <section class="about" [@fadeAnimation]="isVisible ? 'visible' : 'hidden'">
-  <app-section-title section="about.title"></app-section-title>
+  <app-section-title section="about.title" appVisibility (visibilityChange)="isVisible = $event"></app-section-title>
 
   <app-section-description section="about.description"></app-section-description>
 

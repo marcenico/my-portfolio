@@ -16,18 +16,6 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {
     this.setSkills();
   }
-  ngAfterViewInit(): void {
-    const targetElement = document.getElementById('skills');
-    if (!targetElement) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        this.isVisible = entry.isIntersecting ? true : false;
-      });
-    });
-
-    observer.observe(targetElement);
-  }
 
   private setSkills() {
     this.skills.push({ name: 'HTML', icon: 'assets/images/html-icon.svg' });
