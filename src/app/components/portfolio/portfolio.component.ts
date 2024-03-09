@@ -20,7 +20,7 @@ export class PortfolioComponent implements OnInit {
           title: `${res.items[0]?.title}<a class="o-text--h4 o-text--first-color" href="https://latinad.com/" target="_blank">LatinAd</a>`,
           description: `${res.items[0]?.description}`,
           pageLink: undefined,
-          gitHubLink: undefined
+          gitHubLink: 'https://github.com/marcenico/latinad-mundial'
         }
       ];
     });
@@ -34,7 +34,7 @@ export class PortfolioComponent implements OnInit {
           title: `${translations.portfolio.items[0].title}<a class="o-text--h4 o-text--first-color" href="https://latinad.com/" target="_blank">LatinAd</a>`,
           description: `${translations.portfolio.items[0].description}`,
           pageLink: undefined,
-          gitHubLink: undefined
+          gitHubLink: 'https://github.com/marcenico/latinad-mundial'
         }
       ];
     });

@@ -16,6 +16,12 @@
         </a>
       </li>
 
+      <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'portfolio' }">
+        <a class="nav__link o-text o-text--sm o-text--white o-text--semi-bold" (click)="goTo('portfolio'); toggleMenu()"
+          ><i class="uil uil-file-alt o-text o-text--h3"></i>{{ 'header.portfolio' | translate }}
+        </a>
+      </li>
+
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'about' }">
         <a class="nav__link o-text o-text--sm o-text--white o-text--semi-bold" (click)="goTo('about'); toggleMenu()"
           ><i class="uil uil-user-circle o-text o-text--h3"></i>{{ 'header.about' | translate }}
@@ -25,12 +31,6 @@
       <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'skills' }">
         <a class="nav__link o-text o-text--sm o-text--white o-text--semi-bold" (click)="goTo('skills'); toggleMenu()"
           ><i class="uil uil-bolt o-text o-text--h3"></i>{{ 'header.skills' | translate }}
-        </a>
-      </li>
-
-      <li class="nav__item nav__item--border-left" [ngClass]="{ 'is-active': activeSection === 'portfolio' }">
-        <a class="nav__link o-text o-text--sm o-text--white o-text--semi-bold" (click)="goTo('portfolio'); toggleMenu()"
-          ><i class="uil uil-file-alt o-text o-text--h3"></i>{{ 'header.portfolio' | translate }}
         </a>
       </li>
 
